@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabix Bazis Tools — iRealBy_3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.25);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 32px;
+    }
+
+    .author-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 14px;
+      color: #cbd5e1;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 6px 16px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .author-tag strong {
+      color: #38bdf8;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 20px var(--accent-glow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: #e2e8f0;
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* Grid & Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      transition: border-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      margin-bottom: 20px;
+    }
+
+    /* Download table */
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 60px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--card-border);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #e2e8f0;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .lang-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+
+    .file-link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 13px;
+      transition: color 0.15s;
+    }
+
+    .file-link:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+
+    /* Interactive Preview Box */
+    .preview-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .preview-header {
+      margin-bottom: 24px;
+    }
+
+    .size-tabs {
+      display: inline-flex;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      margin-bottom: 24px;
+    }
+
+    .size-tab {
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: none;
+      background: transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .size-tab.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .label-canvas-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 10px;
+      background: #040508;
+      border-radius: 12px;
+      border: 1px dashed var(--card-border);
+    }
+
+    .sim-label {
+      background: #ffffff;
+      color: #000000;
+      border-radius: 4px;
+      border: 1px solid #111;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      position: relative;
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0 60px;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">🔥 Bazis-Raskroy Moslashuvchan Tizimi</div>
+      <h1>Cabix Bazis Tools</h1>
+      <p class="subtitle">Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketkalar va avtomatlashtirish to'plami.</p>
+      <div class="author-tag">
+        Muallif: <strong>iRealBy_3D</strong> &nbsp;|&nbsp; Versiya: <strong>v1.0 / v17.0</strong>
+      </div>
+      
+      <div class="action-buttons">
+        <a href="https://github.com/irealby3d/cabix-bazis-tools" class="btn btn-primary" target="_blank">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Repositoriy
+        </a>
+        <a href="#downloads" class="btn btn-secondary">
+          Yuklab Olish (.lbl)
+        </a>
+      </div>
+    </header>
+
+    <!-- Interactive Simulation Preview -->
+    <div class="preview-box">
+      <div class="preview-header">
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Dinamik Moslashuvchanlik Simulyatori</h2>
+        <p style="color: var(--text-muted); font-size: 14px;">Printer qog'oz o'lchami o'zgarganda etiketka elementlari qanday mutanosib kengayishini ko'ring:</p>
+      </div>
+
+      <div class="size-tabs">
+        <button class="size-tab active" onclick="setSize(58, 40, 0.65)">58 × 40 mm</button>
+        <button class="size-tab" onclick="setSize(70, 50, 0.82)">70 × 50 mm</button>
+        <button class="size-tab" onclick="setSize(80, 60, 1.0)">80 × 60 mm (Standart)</button>
+        <button class="size-tab" onclick="setSize(100, 60, 1.15)">100 × 60 mm</button>
+      </div>
+
+      <div class="label-canvas-wrap">
+        <div id="simLabel" class="sim-label" style="width: 290px; height: 200px;">
+          <!-- Top Row -->
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <div style="font-size: 11px; font-weight:bold;">Soni: 1 dona</div>
+              <div style="font-size: 12px; font-weight:bold; color: #1e3a8a;">XNC1 (01_025_1_1)</div>
+              <div style="font-size: 10px; color:#475569;">Oshxona Shkafi V1</div>
+              <div style="font-size: 9px; color:#64748b;">LDSP Dub 18mm</div>
+            </div>
+            <div id="simQr" style="width: 55px; height: 55px; background: #000; border-radius: 4px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:9px; font-weight:bold; text-align:center;">
+              QR<br>CODE
+            </div>
+          </div>
+
+          <!-- Middle Size & Edges -->
+          <div style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 6px 0; margin: 4px 0; text-align: center;">
+            <div style="display:flex; justify-content:space-between; font-size:8px; font-weight:bold; margin-bottom:2px; font-family: monospace;">
+              <span>PVX 0.4/19</span>
+              <span>PVX 2.0/19</span>
+            </div>
+            <div id="simSizeText" style="font-size: 16px; font-weight: bold; letter-spacing: 0.5px;">720.00 × 560.00</div>
+            <div style="display:flex; justify-content:space-between; font-size:8px; font-weight:bold; margin-top:2px; font-family: monospace;">
+              <span>PVX 2.0/19</span>
+              <span>PVX 0.4/19</span>
+            </div>
+          </div>
+
+          <!-- Bottom Row -->
+          <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+              <div style="font-size: 11px; font-weight:bold;">Bokovyna Chap</div>
+              <div style="font-size: 10px; color: #0284c7;">Scan Me --&gt;&gt; App</div>
+              <div style="font-size: 8px; color: #64748b;">2026.09.30 14:00</div>
+            </div>
+            <div id="simQr2" style="width: 50px; height: 50px; background: #000; border-radius: 4px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:8px; font-weight:bold; text-align:center;">
+              PART<br>QR
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid">
+      <div class="card">
+        <h3>📐 17 Pog'onali Masshtab</h3>
+        <p>Printer o'lchami o'zgarganda shriftlar xiralashmaydi yoki mayda bo'lib qolmaydi — avtomatik tarzda eng mutanosib o'lchamga o'tadi.</p>
+      </div>
+      <div class="card">
+        <h3>✂️ Nol To'qnashuv Kafolati</h3>
+        <p>Kromka chiziqlari raqamlar ustiga tushmaydi. Har bir blok matematik hisoblangan xavfsiz oraliqda mustaqil taqsimlanadi.</p>
+      </div>
+      <div class="card">
+        <h3>📦 Qoldiq (Остаток) Moduli</h3>
+        <p>Qoldiq detallar omborini avtomatlashtirish uchun yirik QR-kodli va to'liq ma'lumotli alohida professional ko'rinish.</p>
+      </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="table-container" id="downloads">
+      <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 6px;">Rasmiy Shablonlar To'plami (.lbl)</h2>
+      <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">O'zingizga mos til va versiyadagi shablonni to'g'ridan-to'g'ri yuklab oling:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Til / Davlat</th>
+            <th>Fayl Nomi</th>
+            <th>Xususiyati</th>
+            <th>Havola</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="lang-badge">🇺🇿 O'zbekcha</span></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_UZ.lbl</code></td>
+            <td>Soni, Foydali qoldiq, P/T/F belgilari</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_UZ.lbl" download class="file-link">Yuklab Olish ⬇️</a></td>
+          </tr>
+          <tr>
+            <td><span class="lang-badge">🇷🇺 Русский</span></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_RU.lbl</code></td>
+            <td>Кол-во, Деловой остаток, П/С/Ф</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_RU.lbl" download class="file-link">Скачать ⬇️</a></td>
+          </tr>
+          <tr>
+            <td><span class="lang-badge">🇰🇿 Қазақша</span></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KZ.lbl</code></td>
+            <td>Саны, Іскерлік қалдық, О/Б/Ф</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KZ.lbl" download class="file-link">Жүктеп алу ⬇️</a></td>
+          </tr>
+          <tr>
+            <td><span class="lang-badge">🇰🇬 Кыргызча</span></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KG.lbl</code></td>
+            <td>Саны, Иштиктүү калдык, О/Б/Ф</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KG.lbl" download class="file-link">Жүктөп алуу ⬇️</a></td>
+          </tr>
+          <tr>
+            <td><span class="lang-badge">🇹🇯 Тоҷикӣ</span></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_TJ.lbl</code></td>
+            <td>Шумора, Боқимондаи корӣ, Ф/П/Т</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_TJ.lbl" download class="file-link">Боргирӣ ⬇️</a></td>
+          </tr>
+          <tr>
+            <td><span class="lang-badge">🇬🇧 English</span></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_EN.lbl</code></td>
+            <td>Qty, Usable Offcut, G/D/M icons</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_EN.lbl" download class="file-link">Download ⬇️</a></td>
+          </tr>
+          <tr style="background: rgba(59, 130, 246, 0.05);">
+            <td><span class="lang-badge">⭐ Master v17</span></td>
+            <td><code>Cabix_Etiket_v17_Moslashuvchan.lbl</code></td>
+            <td>To'liq parametrli Master versiya</td>
+            <td><a href="labels/Cabix_Etiket_v17_Moslashuvchan.lbl" download class="file-link">Master v17 ⬇️</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>Muallif: <strong>iRealBy_3D</strong> &nbsp;•&nbsp; Loyiha: <a href="https://github.com/irealby3d/cabix-bazis-tools">cabix-bazis-tools</a> &nbsp;•&nbsp; MIT License</p>
+    </footer>
+  </div>
+
+  <script>
+    function setSize(wMm, hMm, scale) {
+      const tabs = document.querySelectorAll('.size-tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const label = document.getElementById('simLabel');
+      const qr1 = document.getElementById('simQr');
+      const qr2 = document.getElementById('simQr2');
+      const sizeText = document.getElementById('simSizeText');
+
+      // Scale visual preview
+      label.style.width = (wMm * 4.6) + 'px';
+      label.style.height = (hMm * 4.6) + 'px';
+
+      qr1.style.width = (55 * scale) + 'px';
+      qr1.style.height = (55 * scale) + 'px';
+      qr2.style.width = (50 * scale) + 'px';
+      qr2.style.height = (50 * scale) + 'px';
+
+      sizeText.style.fontSize = (16 * scale) + 'px';
+    }
+  </script>
+</body>
+</html>
