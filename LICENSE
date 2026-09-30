@@ -1,21 +1,49 @@
-MIT License
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (CC BY-NC-SA 4.0)
 
 Copyright (c) 2026 iRealBy_3D
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+================================================================================
+HUQUQIY MAQOM VA MUALLIFLIK HUQUQI QAYDLARI (LEGAL NOTICE & ATTRIBUTION):
+================================================================================
+1. ASOS (ORIGINAL BASE):
+   Ushbu shablonlar bazasi Giblab tomonidan bepul ochiq taqdim etilgan namunaviy 
+   etiketka fayli asosida olingan.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. ARXITEKTURA VA MODIFIKATSIYA MUALLIFI (AUTHOR OF ARCHITECTURE & MODIFICATIONS):
+   iRealBy_3D
+   - 17-pog'onali dinamik proporsional masshtablash tizimi;
+   - 6 tildagi to'liq mahalliylashtirish (UZ, RU, KZ, KG, TJ, EN);
+   - Qoldiq (Остаток / Деловой остаток) moduli arxitekturasi;
+   - Nol to'qnashuv (Zero Collision) joylashuv algoritmi.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. FOYDALANISH SHARTLARI (TERMS OF USE):
+   - BEPUL (FREE): Mebel ustalari, korxonalar va sexlar o'z ishlab chiqarishida 
+     etiketkalarni bepul chop etish va erkin foydalanish huquqiga ega.
+   - SOTISH QAT'IYAN TAQIQLANADI (NON-COMMERCIAL / RESALE PROHIBITED):
+     Ushbu shablonlarni, ularning kodini yoki modifikatsiyalarini pullash, 
+     qayta sotish, pullik kurslarga yoki yopiq tijoriy paketlarga qo'shish, 
+     shuningdek tijoriy vositachilik qilish QAT'IYAN MAN ETILADI!
+   - ATTRIBUTION (MUALLIFLIK KO'RSATILISHI):
+     Har qanday erkin tarqatishda Giblab (asl baza) va iRealBy_3D (arxitektura 
+     va modifikatsiya muallifi) nomi o'zgartirilmasdan saqlanishi shart.
+   - SHARE-ALIKE (HAMKORLIK):
+     Shablonlar asosida yaratilgan har qanday yangi modifikatsiyalar ham faqat 
+     ushbu bepul va sotish taqiqlangan shart (CC BY-NC-SA 4.0) ostida tarqatilishi shart.
+
+================================================================================
+SUMMARY OF CREATIVE COMMONS BY-NC-SA 4.0:
+================================================================================
+You are free to:
+- Share — copy and redistribute the material in any medium or format.
+- Adapt — remix, transform, and build upon the material.
+
+Under the following terms:
+- Attribution — You must give appropriate credit to iRealBy_3D and Giblab, 
+  provide a link to the license, and indicate if changes were made.
+- NonCommercial — You may NOT use the material for commercial purposes (selling, 
+  paid bundles, monetization).
+- ShareAlike — If you remix, transform, or build upon the material, you must 
+  distribute your contributions under the same license as the original.
+
+Full Legal Code available at:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

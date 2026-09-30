@@ -4,7 +4,7 @@
 
 ✍️ **Muallif:** `iRealBy_3D`  
 🌐 **GitHub Pages:** [https://irealby3d.github.io/cabix-bazis-tools/](https://irealby3d.github.io/cabix-bazis-tools/)  
-📜 **Litsenziya:** MIT License
+📜 **Litsenziya:** CC BY-NC-SA 4.0 (Bepul / Sotish taqiqlanadi)
 
 ---
 
@@ -68,7 +68,9 @@ Bazis-Raskroy uchun 100% universal va dinamik moslashuvchan etiketkalar shabloni
 
 ---
 
-## 📜 Mualliflik Huquqi
+## 📜 Mualliflik Huquqi va Foydalanish Shartlari
 
-Ushbu loyiha muallifi: **`iRealBy_3D`**.  
-Loyiha ochiq kodli va erkin foydalanish uchun taqdim etiladi (MIT License).
+- **Asl Shablon Asosi:** Giblab ochiq shabloni
+- **Arxitektura va Modifikatsiya Muallifi:** **`iRealBy_3D`**
+- **Litsenziya:** [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- ⛔ **Qat'iy Talab:** Ushbu shablonlar mebel ustalari va sexlar uchun **bepul**. Shablonlarni, ularning kodini pullash, pullik kurslarga qo'shish yoki **qayta sotish QAT'IYAN TAQIQLANADI!**
