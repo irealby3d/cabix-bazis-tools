@@ -326,7 +326,7 @@
       <h1>Cabix Bazis Tools</h1>
       <p class="subtitle">Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketkalar va avtomatlashtirish to'plami.</p>
       <div class="author-tag">
-        Muallif: <strong>iRealBy_3D</strong> &nbsp;|&nbsp; Versiya: <strong>v1.0 / v17.0</strong>
+        Muallif: <strong>iRealBy_3D</strong> &nbsp;|&nbsp; Versiya: <strong>v1.0 / v1.01</strong>
       </div>
       
       <div class="action-buttons">
@@ -359,7 +359,7 @@
           <!-- Top Row -->
           <div style="display:flex; justify-content:space-between; align-items:flex-start;">
             <div>
-              <div style="font-size: 11px; font-weight:bold;">Soni: 1 dona</div>
+              <div id="simQtyText" style="font-size: 11px; font-weight:bold;">Soni: 1 dona</div>
               <div style="font-size: 12px; font-weight:bold; color: #1e3a8a;">XNC1 (01_025_1_1)</div>
               <div style="font-size: 10px; color:#475569;">Oshxona Shkafi V1</div>
               <div style="font-size: 9px; color:#64748b;">LDSP Dub 18mm</div>
@@ -400,8 +400,8 @@
     <!-- Features Grid -->
     <div class="grid">
       <div class="card">
-        <h3>📐 17 Pog'onali Masshtab</h3>
-        <p>Printer o'lchami o'zgarganda shriftlar xiralashmaydi yoki mayda bo'lib qolmaydi — avtomatik tarzda eng mutanosib o'lchamga o'tadi.</p>
+        <h3>🌐 Dinamik Til Tanlash (v1.01)</h3>
+        <p>Bitta shablonning o'zida Bazis parametrlaridan tilni o'zgartirish kifoya (1=UZ, 2=RU, 3=KZ, 4=KG, 5=TJ, 6=EN).</p>
       </div>
       <div class="card">
         <h3>✂️ Nol To'qnashuv Kafolati</h3>
@@ -421,54 +421,60 @@
       <table>
         <thead>
           <tr>
-            <th>Til / Davlat</th>
+            <th>Til / Versiya</th>
             <th>Fayl Nomi</th>
             <th>Xususiyati</th>
             <th>Havola</th>
           </tr>
         </thead>
         <tbody>
+          <tr style="background: rgba(59, 130, 246, 0.08);">
+            <td><span class="lang-badge">🔥 MultiLang v1.01</span></td>
+            <td><code>Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl</code></td>
+            <td>Parametr orqali til o'zgaradi (UZ/RU/KZ/KG/TJ/EN)</td>
+            <td><a href="labels/Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl" download class="file-link">MultiLang v1.01 ⬇️</a></td>
+          </tr>
+          <tr style="background: rgba(59, 130, 246, 0.04);">
+            <td><span class="lang-badge">⭐ Master v1</span></td>
+            <td><code>Cabix_Etiket_v1_Moslashuvchan_.lbl</code></td>
+            <td>Universal asosiy shablon</td>
+            <td><a href="labels/Cabix_Etiket_v1_Moslashuvchan_.lbl" download class="file-link">Master v1 ⬇️</a></td>
+          </tr>
           <tr>
             <td><span class="lang-badge">🇺🇿 O'zbekcha</span></td>
-            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_UZ.lbl</code></td>
-            <td>Soni, Foydali qoldiq, P/T/F belgilari</td>
-            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_UZ.lbl" download class="file-link">Yuklab Olish ⬇️</a></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_UZ.lbl</code></td>
+            <td>100% o'zbekcha izohlar va matnlar (Soni, Qoldiq)</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_UZ.lbl" download class="file-link">Yuklab Olish ⬇️</a></td>
           </tr>
           <tr>
             <td><span class="lang-badge">🇷🇺 Русский</span></td>
-            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_RU.lbl</code></td>
-            <td>Кол-во, Деловой остаток, П/С/Ф</td>
-            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_RU.lbl" download class="file-link">Скачать ⬇️</a></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_RU.lbl</code></td>
+            <td>100% русские комментарии и тексты (Кол-во, Остаток)</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_RU.lbl" download class="file-link">Скачать ⬇️</a></td>
           </tr>
           <tr>
             <td><span class="lang-badge">🇰🇿 Қазақша</span></td>
-            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KZ.lbl</code></td>
-            <td>Саны, Іскерлік қалдық, О/Б/Ф</td>
-            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KZ.lbl" download class="file-link">Жүктеп алу ⬇️</a></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_KZ.lbl</code></td>
+            <td>100% қазақша түсініктемелер мен мәтіндер (Саны, Қалдық)</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_KZ.lbl" download class="file-link">Жүктеп алу ⬇️</a></td>
           </tr>
           <tr>
             <td><span class="lang-badge">🇰🇬 Кыргызча</span></td>
-            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KG.lbl</code></td>
-            <td>Саны, Иштиктүү калдык, О/Б/Ф</td>
-            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KG.lbl" download class="file-link">Жүктөп алуу ⬇️</a></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_KG.lbl</code></td>
+            <td>100% кыргызча түшүндүрмөлөр жана тексттер (Саны, Калдык)</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_KG.lbl" download class="file-link">Жүктөп алуу ⬇️</a></td>
           </tr>
           <tr>
             <td><span class="lang-badge">🇹🇯 Тоҷикӣ</span></td>
-            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_TJ.lbl</code></td>
-            <td>Шумора, Боқимондаи корӣ, Ф/П/Т</td>
-            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_TJ.lbl" download class="file-link">Боргирӣ ⬇️</a></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_TJ.lbl</code></td>
+            <td>100% эзоҳҳо ва матнҳо бо тоҷикӣ (Шумора, Боқимонда)</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_TJ.lbl" download class="file-link">Боргирӣ ⬇️</a></td>
           </tr>
           <tr>
             <td><span class="lang-badge">🇬🇧 English</span></td>
-            <td><code>Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_EN.lbl</code></td>
-            <td>Qty, Usable Offcut, G/D/M icons</td>
-            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_EN.lbl" download class="file-link">Download ⬇️</a></td>
-          </tr>
-          <tr style="background: rgba(59, 130, 246, 0.05);">
-            <td><span class="lang-badge">⭐ Master v17</span></td>
-            <td><code>Cabix_Etiket_v17_Moslashuvchan.lbl</code></td>
-            <td>To'liq parametrli Master versiya</td>
-            <td><a href="labels/Cabix_Etiket_v17_Moslashuvchan.lbl" download class="file-link">Master v17 ⬇️</a></td>
+            <td><code>Cabix_Etiket_58x40_80x60_v1_EN.lbl</code></td>
+            <td>100% English comments & texts (Qty, Offcut)</td>
+            <td><a href="labels/Cabix_Etiket_58x40_80x60_v1_EN.lbl" download class="file-link">Download ⬇️</a></td>
           </tr>
         </tbody>
       </table>

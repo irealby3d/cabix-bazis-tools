@@ -13,26 +13,27 @@
 ```text
 cabix-bazis-tools/
 │
-├── labels/                      <-- Moslashuvchan etiketka shablonlari (.lbl)
-│   ├── Cabix_Etiket_v17_Moslashuvchan.lbl
-│   ├── Qollanma_v17.md
+├── labels/                                          <-- Moslashuvchan etiketka shablonlari (.lbl)
+│   ├── Cabix_Etiket_v1_Moslashuvchan_.lbl            (Universal Master shablon)
+│   ├── Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl (Dinamik til sozlanuvchi v1.01 versiya)
+│   ├── Readme.md                                    (Barcha tillardagi Release Notes)
 │   │
-│   ├── Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_UZ.lbl  (O'zbekcha)
-│   ├── Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_RU.lbl  (Русский)
-│   ├── Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KZ.lbl  (Қазақша)
-│   ├── Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_KG.lbl  (Кыргызча)
-│   ├── Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_TJ.lbl  (Тоҷикӣ)
-│   ├── Cabix_Etiket_58x40_80x60_v1_Moslashuvchan_EN.lbl  (English)
+│   ├── Cabix_Etiket_58x40_80x60_v1_UZ.lbl           (O'zbekcha - 100% o'zbekcha izohlar bilan)
+│   ├── Cabix_Etiket_58x40_80x60_v1_RU.lbl           (Русский - 100% русские комментарии)
+│   ├── Cabix_Etiket_58x40_80x60_v1_KZ.lbl           (Қазақша - 100% қазақша түсініктемелер)
+│   ├── Cabix_Etiket_58x40_80x60_v1_KG.lbl           (Кыргызча - 100% кыргызча түшүндүрмөлөр)
+│   ├── Cabix_Etiket_58x40_80x60_v1_TJ.lbl           (Тоҷикӣ - 100% эзоҳҳо бо забони тоҷикӣ)
+│   ├── Cabix_Etiket_58x40_80x60_v1_EN.lbl           (English - 100% English comments)
 │   └── Qollanma_v1_Multilingual.md
 │
-├── scripts/                     <-- Kelajakdagi JS skriptlar
-│   ├── raskroy/                 (2D Raskroy va nesting skriptlari)
-│   ├── panels/                  (Panellar bilan ishlash, elastik o'lchamlar)
-│   └── export/                  (Eksport va hisobot generatorlari)
+├── scripts/                                         <-- Kelajakdagi JS skriptlar
+│   ├── raskroy/                                     (2D Raskroy va nesting skriptlari)
+│   ├── panels/                                      (Panellar bilan ishlash, elastik o'lchamlar)
+│   └── export/                                      (Eksport va hisobot generatorlari)
 │
-├── LICENSE                      <-- Mualliflik litsenziyasi (MIT)
-├── README.md                    <-- Asosiy bosh sahifa
-└── index.html                   <-- GitHub Pages interaktiv veb-sayti
+├── LICENSE                                          <-- MIT Mualliflik litsenziyasi (iRealBy_3D)
+├── README.md                                        <-- Asosiy bosh sahifa
+└── index.html                                       <-- GitHub Pages interaktiv veb-sayti
 ```
 
 ---
@@ -42,14 +43,16 @@ cabix-bazis-tools/
 Bazis-Raskroy uchun 100% universal va dinamik moslashuvchan etiketkalar shabloni.
 
 ### Asosiy Imkoniyatlar:
-1. **17 Pog'onali Proporsional Masshtab (`k`):**
+1. **Dinamik Til Sozlamasi (v1.01):**
+   `Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl` faylida etiketka tilini parametrlardan bir zumda tanlash mumkin (`lang`: `1=UZ`, `2=RU`, `3=KZ`, `4=KG`, `5=TJ`, `6=EN`).
+2. **100% Mahalliy Tilga Moslashgan Shablonlar (v1.0):**
+   Har bir MDH davlati va xalqaro foydalanuvchilar uchun alohida to'liq o'z tilidagi izohlar va matnlarga ega shablonlar mavjud.
+3. **17 Pog'onali Proporsional Masshtab (`k`):**
    Printer o'lchami 58×40 dan 100×60 mm gacha o'zgarganda shriftlar, QR-kod va ikonkalar avtomatik ravishda mutanosib kattalashadi va kichrayadi.
-2. **Nol To'qnashuv (Zero Collision):**
+4. **Nol To'qnashuv (Zero Collision):**
    Kromka chiziqlari raqamlar yoki yozuvlar ustiga chiqib ketmaydi.
-3. **Qoldiq (Остаток / Деловой остаток) Rejimi:**
+5. **Qoldiq (Остаток / Деловой остаток) Rejimi:**
    `waste = true` bo'lganda omborni hisobga olish uchun maxsus yirik QR-kodli qoldiq etiketkasi chiqadi.
-4. **Ko'p Tilli Qo'llab-quvvatlash:**
-   O'zbek, Rus, Qazoq, Qirg'iz, Tojik va Ingliz tillaridagi tayyor shablonlar.
 
 ---
 
@@ -59,14 +62,15 @@ Bazis-Raskroy uchun 100% universal va dinamik moslashuvchan etiketkalar shabloni
    ```bash
    git clone https://github.com/irealby3d/cabix-bazis-tools.git
    ```
-2. `labels/` papkasidagi o'zingizga kerakli `.lbl` faylni tanlang (masalan, `Cabix_Etiket_v17_Moslashuvchan.lbl` yoki tilga mos `..._UZ.lbl`).
+2. `labels/` papkasidan o'zingizga ma'qul `.lbl` faylni tanlang:
+   - Agar tilni Bazis ichidan tanlamoqchi bo'lsangiz: `Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl`
+   - Agar to'liq o'z tilingizdagi shablonni istasangiz: `Cabix_Etiket_58x40_80x60_v1_UZ.lbl` (yoki RU, KZ, KG, TJ, EN).
 3. **Bazis-Raskroy** dasturida:
-   `Настройки` -> `Параметры бирки (этикетки)` bo'limiga kirib, yuklab olingan `.lbl` faylni tanlang.
-4. Qog'oz o'lchami o'zgarganda shablon avtomatik ravishda moslashadi!
+   `Настройки` -> `Параметры бирки (этикетки)` bo'limiga kirib, tanlangan `.lbl` faylni oching.
 
 ---
 
 ## 📜 Mualliflik Huquqi
 
 Ushbu loyiha muallifi: **`iRealBy_3D`**.  
-Loyiha ochiq kodli va erkin foydalanish uchun taqdim etiladi.
+Loyiha ochiq kodli va erkin foydalanish uchun taqdim etiladi (MIT License).
