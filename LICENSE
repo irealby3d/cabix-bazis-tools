@@ -1,34 +1,43 @@
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (CC BY-NC-SA 4.0)
+================================================================================
+LICENSE: FREE (RESALE STRICTLY PROHIBITED!)
+LITSENZIYA: BEPUL (SOTISH QAT'IYAN TAQIQLANADI!)
+ЛИЦЕНЗИЯ: БЕСПЛАТНО (ПРОДАЖА СТРОГО ЗАПРЕЩЕНА!)
+================================================================================
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 Copyright (c) 2026 iRealBy_3D
+Architecture & Development: iRealBy_3D
+Base Template Source: Giblab
+Project: Cabix Smart Adaptive Labels for Bazis-Raskroy
+Version: v1.0.1 Universal Adaptive
 
 ================================================================================
-HUQUQIY MAQOM VA MUALLIFLIK HUQUQI QAYDLARI (LEGAL NOTICE & ATTRIBUTION):
+HUQUQIY MAQOM VA MUALLIFLIK QAYDLARI (LEGAL NOTICE & ATTRIBUTION):
 ================================================================================
 1. ASOS (ORIGINAL BASE):
-   Ushbu shablonlar bazasi Giblab tomonidan bepul ochiq taqdim etilgan namunaviy 
-   etiketka fayli asosida olingan.
+   Ushbu shablonlar bazasi Giblab tomonidan ochiq va bepul taqdim etilgan
+   namunaviy etiketka fayli asosida ishlab chiqilgan.
 
 2. ARXITEKTURA VA MODIFIKATSIYA MUALLIFI (AUTHOR OF ARCHITECTURE & MODIFICATIONS):
    iRealBy_3D
-   - 17-pog'onali dinamik proporsional masshtablash tizimi;
-   - 6 tildagi to'liq mahalliylashtirish (UZ, RU, KZ, KG, TJ, EN);
-   - Qoldiq (Остаток / Деловой остаток) moduli arxitekturasi;
-   - Nol to'qnashuv (Zero Collision) joylashuv algoritmi.
+   - 17-pog'onali dinamik proporsional masshtablash tizimi (58x40 dan 100x60 mm gacha);
+   - Nol to'qnashuv (Zero Collision) joylashuv algoritmi;
+   - Qoldiq (Остаток / Деловой остаток) avtomatik moduli;
+   - XNC amallari, teshik, freza va paz ikonkalarining avtomatik koordinata tizimi.
 
 3. FOYDALANISH SHARTLARI (TERMS OF USE):
-   - BEPUL (FREE): Mebel ustalari, korxonalar va sexlar o'z ishlab chiqarishida 
-     etiketkalarni bepul chop etish va erkin foydalanish huquqiga ega.
-   - SOTISH QAT'IYAN TAQIQLANADI (NON-COMMERCIAL / RESALE PROHIBITED):
-     Ushbu shablonlarni, ularning kodini yoki modifikatsiyalarini pullash, 
-     qayta sotish, pullik kurslarga yoki yopiq tijoriy paketlarga qo'shish, 
-     shuningdek tijoriy vositachilik qilish QAT'IYAN MAN ETILADI!
+   - BEPUL (FREE): Barcha mebel ustalari, korxonalar va sexlar o'z ishlab
+     chiqarishida etiketkalarni bepul yuklab olish, sozlash va chop etish huquqiga ega.
+   - SOTISH QAT'IYAN TAQIQLANADI (RESALE STRICTLY PROHIBITED / NON-COMMERCIAL):
+     Ushbu shablonni, uning kodini yoki undan hosil qilingan modifikatsiyalarni
+     sotish, pullik kurslar yoki yopiq tijoriy paketlar tarkibida tarqatish,
+     pullik qilish yoki har qanday tijoriy vositachilik qilish QAT'IYAN MAN ETILADI!
    - ATTRIBUTION (MUALLIFLIK KO'RSATILISHI):
-     Har qanday erkin tarqatishda Giblab (asl baza) va iRealBy_3D (arxitektura 
+     Har qanday bepul tarqatishda Giblab (asl baza) va iRealBy_3D (arxitektura
      va modifikatsiya muallifi) nomi o'zgartirilmasdan saqlanishi shart.
    - SHARE-ALIKE (HAMKORLIK):
-     Shablonlar asosida yaratilgan har qanday yangi modifikatsiyalar ham faqat 
-     ushbu bepul va sotish taqiqlangan shart (CC BY-NC-SA 4.0) ostida tarqatilishi shart.
+     Ushbu shablon asosida yaratilgan har qanday o'zgarishlar faqat ushbu bepul
+     va sotish taqiqlangan shart (CC BY-NC-SA 4.0) ostida tarqatilishi shart.
 
 ================================================================================
 SUMMARY OF CREATIVE COMMONS BY-NC-SA 4.0:
@@ -38,11 +47,11 @@ You are free to:
 - Adapt — remix, transform, and build upon the material.
 
 Under the following terms:
-- Attribution — You must give appropriate credit to iRealBy_3D and Giblab, 
+- Attribution — You must give appropriate credit to iRealBy_3D and Giblab,
   provide a link to the license, and indicate if changes were made.
-- NonCommercial — You may NOT use the material for commercial purposes (selling, 
-  paid bundles, monetization).
-- ShareAlike — If you remix, transform, or build upon the material, you must 
+- NonCommercial — You may NOT use the material for commercial purposes (selling,
+  paid bundles, monetization, or paid distribution).
+- ShareAlike — If you remix, transform, or build upon the material, you must
   distribute your contributions under the same license as the original.
 
 Full Legal Code available at:

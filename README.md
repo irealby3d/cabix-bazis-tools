@@ -1,10 +1,11 @@
 # Cabix Bazis Tools 🛠️
 
-**Bazis-Mebelshchik va Bazis-Raskroy uchun professional avtomatlashtirish vositalari, skriptlar va adaptiv etiketkalar to'plami.**
+**Bazis-Mebelshchik va Bazis-Raskroy uchun professional avtomatlashtirish vositalari, skriptlar va universal moslashuvchan etiketka.**
 
-✍️ **Muallif:** `iRealBy_3D`  
+✍️ **Muallif / Developer:** `iRealBy_3D`  
+🏛️ **Asl baza / Original Base:** Giblab  
 🌐 **GitHub Pages:** [https://irealby3d.github.io/cabix-bazis-tools/](https://irealby3d.github.io/cabix-bazis-tools/)  
-📜 **Litsenziya:** CC BY-NC-SA 4.0 (Bepul / Sotish taqiqlanadi)
+📜 **Litsenziya / License:** `License: Free (Resale strictly prohibited!)` — CC BY-NC-SA 4.0
 
 ---
 
@@ -13,64 +14,52 @@
 ```text
 cabix-bazis-tools/
 │
-├── labels/                                          <-- Moslashuvchan etiketka shablonlari (.lbl)
-│   ├── Cabix_Etiket_58x40_80x60_v1.0.1.lbl          (Asosiy Moslashuvchan shablon)
-│   ├── Readme.md                                    (Barcha tillardagi Release Notes)
-│   │
-│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_UZ.lbl       (🇺🇿 O'zbekcha - 100% o'zbekcha matnlar)
-│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_RU.lbl       (🇷🇺 Русский - 100% русские тексты)
-│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_KZ.lbl       (🇰🇿 Қазақша - 100% қазақша мәтіндер)
-│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_KG.lbl       (🇰🇬 Кыргызча - 100% кыргызча тексттер)
-│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_TJ.lbl       (🇹🇯 Тоҷикӣ - 100% матнҳо бо забони тоҷикӣ)
-│   └── Cabix_Etiket_58x40_80x60_v1.0.1_EN.lbl       (🇬🇧 English - 100% English texts)
+├── labels/                                          <-- Moslashuvchan etiketka shabloni (.lbl)
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1.lbl          (Asosiy Universal Moslashuvchan shablon)
+│   └── Readme.md                                    (Etiketka bo'yicha to'liq qo'llanma)
 │
 ├── scripts/                                         <-- Kelajakdagi JS skriptlar
 │   ├── raskroy/                                     (2D Raskroy va nesting skriptlari)
 │   ├── panels/                                      (Panellar bilan ishlash, elastik o'lchamlar)
 │   └── export/                                      (Eksport va hisobot generatorlari)
 │
-├── LICENSE                                          <-- MIT Mualliflik litsenziyasi (iRealBy_3D)
+├── LICENSE                                          <-- CC BY-NC-SA 4.0 (Free - Resale strictly prohibited)
 ├── README.md                                        <-- Asosiy bosh sahifa
-└── index.html                                       <-- GitHub Pages interaktiv veb-sayti
+└── index.html                                       <-- GitHub Pages rasmiy veb-sayti
 ```
 
 ---
 
-## 🏷️ labels/ — Cabix Smart Adaptive Labels
+## 🏷️ Cabix Smart Adaptive Label v1.0.1 (`Cabix_Etiket_58x40_80x60_v1.0.1.lbl`)
 
-Bazis-Raskroy uchun 100% universal va dinamik moslashuvchan etiketkalar shabloni.
+Bazis-Raskroy uchun yagona, to'liq universal va dinamik moslashuvchan etiketka shabloni.
 
-### Asosiy Imkoniyatlar:
-1. **Dinamik Til Sozlamasi (v1.01):**
-   `Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl` faylida etiketka tilini parametrlardan bir zumda tanlash mumkin (`lang`: `1=UZ`, `2=RU`, `3=KZ`, `4=KG`, `5=TJ`, `6=EN`).
-2. **100% Mahalliy Tilga Moslashgan Shablonlar (v1.0):**
-   Har bir MDH davlati va xalqaro foydalanuvchilar uchun alohida to'liq o'z tilidagi izohlar va matnlarga ega shablonlar mavjud.
-3. **17 Pog'onali Proporsional Masshtab (`k`):**
-   Printer o'lchami 58×40 dan 100×60 mm gacha o'zgarganda shriftlar, QR-kod va ikonkalar avtomatik ravishda mutanosib kattalashadi va kichrayadi.
-4. **Nol To'qnashuv (Zero Collision):**
-   Kromka chiziqlari raqamlar yoki yozuvlar ustiga chiqib ketmaydi.
-5. **Qoldiq (Остаток / Деловой остаток) Rejimi:**
-   `waste = true` bo'lganda omborni hisobga olish uchun maxsus yirik QR-kodli qoldiq etiketkasi chiqadi.
+### ✨ Asosiy Imkoniyatlar:
+1. **17 Pog'onali Proporsional Masshtab (`k`):**
+   Printer o'lchami 58×40 dan 100×60 mm gacha bo'lgan har qanday lentaga avtomatik moslashadi. Shriftlar, QR-kodlar va texnologik ikonkalar lentaga qarab proporsional kattalashadi va kichrayadi.
+2. **Nol To'qnashuv (Zero Collision):**
+   Kromka chiziqlari detal o'lcham raqamlari yoki yozuvlar ustiga chiqib ketmaydi.
+3. **Avtomatik Qoldiq (Остаток / Деловой остаток) Moduli:**
+   `waste = true` bo'lganda omborni hisobga olish uchun maxsus yirik QR-kodli qoldiq etiketkasi shakllanadi.
+4. **XNC va Ishlov Berish Belgilari:**
+   Freza (Радиусы), paz (Паз), teshik (Сверление), chorak (Четверть) va 2 detal (Сшивка) belgilari to'liq aks etadi.
 
 ---
 
-## 🚀 Qanday Foydalaniladi?
+## 🚀 Qanday O'rnatiladi?
 
-1. Ushbu omborni yuklab oling (`Code` -> `Download ZIP`) yoki klonlang:
-   ```bash
-   git clone https://github.com/irealby3d/cabix-bazis-tools.git
-   ```
-2. `labels/` papkasidan o'zingizga ma'qul `.lbl` faylni tanlang:
-   - Agar tilni Bazis ichidan tanlamoqchi bo'lsangiz: `Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl`
-   - Agar to'liq o'z tilingizdagi shablonni istasangiz: `Cabix_Etiket_58x40_80x60_v1_UZ.lbl` (yoki RU, KZ, KG, TJ, EN).
-3. **Bazis-Raskroy** dasturida:
-   `Настройки` -> `Параметры бирки (этикетки)` bo'limiga kirib, tanlangan `.lbl` faylni oching.
+1. `labels/` papkasidagi **`Cabix_Etiket_58x40_80x60_v1.0.1.lbl`** faylini yuklab oling.
+2. **Bazis-Raskroy** dasturini oching:
+   - `Настройки` -> `Параметры бирки (этикетки)` bo'limiga kiring.
+   - Shablonni ochish tugmasini bosib, `Cabix_Etiket_58x40_80x60_v1.0.1.lbl` faylini tanlang.
+3. Printeringiz o'lchami bo'yicha (masalan `58x40` yoki `80x60`) chop etishni boshlang!
 
 ---
 
 ## 📜 Mualliflik Huquqi va Foydalanish Shartlari
 
-- **Asl Shablon Asosi:** Giblab ochiq shabloni
+- **Asl Shablon Asosi:** Giblab namunaviy ochiq shabloni
 - **Arxitektura va Modifikatsiya Muallifi:** **`iRealBy_3D`**
 - **Litsenziya:** [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-- ⛔ **Qat'iy Talab:** Ushbu shablonlar mebel ustalari va sexlar uchun **bepul**. Shablonlarni, ularning kodini pullash, pullik kurslarga qo'shish yoki **qayta sotish QAT'IYAN TAQIQLANADI!**
+- ⛔ **Qat'iy Talab (License: Free - Resale strictly prohibited!):**
+  Ushbu shablon barcha mebel ustalari va korxonalar uchun **butunlay bepul**. Shablonni yoki uning kodini sotish, pullik kurslarga qo'shish, pullik paketlar tarkibida tarqatish yoki **qayta sotish QAT'IYAN TAQIQLANADI!**

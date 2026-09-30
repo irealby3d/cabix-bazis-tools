@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cabix Bazis Tools | Universal Mebel Etiketkalari (58x40 - 100x60)</title>
-  <meta name="description" content="Bazis-Mebelshchik va Bazis-Raskroy uchun 17-pog'onali proporsional adaptiv etiketkalar to'plami. UZ, RU, KZ, KG, TJ, EN tillarida.">
+  <title>Cabix Bazis Tools — Universal Moslashuvchan Etiketka (v1.0.1)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --bg-dark: #07090e;
-      --bg-card: rgba(17, 24, 39, 0.7);
+      --bg: #090d16;
+      --bg-card: rgba(18, 24, 38, 0.7);
       --card-border: rgba(255, 255, 255, 0.08);
-      --card-hover: rgba(59, 130, 246, 0.3);
-      --accent: #3b82f6;
+      --card-hover: rgba(59, 130, 246, 0.4);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #2563eb;
       --accent-light: #60a5fa;
-      --accent-glow: rgba(59, 130, 246, 0.25);
-      --text-main: #f3f4f6;
-      --text-muted: #9ca3af;
-      --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --accent-glow: rgba(37, 99, 235, 0.35);
+      --success: #10b981;
+      --success-glow: rgba(16, 185, 129, 0.25);
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --mono: 'JetBrains Mono', monospace;
     }
 
@@ -30,20 +32,20 @@
     }
 
     body {
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.06) 0%, transparent 40%);
-      background-attachment: fixed;
-      color: var(--text-main);
+      background-color: var(--bg);
+      color: var(--text);
       font-family: var(--font);
       line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 100% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
       padding: 0 16px 60px 16px;
-      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 1160px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
@@ -52,47 +54,39 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
+      padding: 18px 0;
       border-bottom: 1px solid var(--card-border);
-      position: sticky;
-      top: 0;
-      background: rgba(7, 9, 14, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      z-index: 100;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-weight: 800;
-      font-size: 17px;
+      font-size: 19px;
       color: #fff;
       text-decoration: none;
-      white-space: nowrap;
+      letter-spacing: -0.02em;
     }
 
     .nav-brand-badge {
       font-size: 11px;
       font-family: var(--mono);
-      background: rgba(59, 130, 246, 0.15);
-      color: var(--accent-light);
       padding: 2px 7px;
+      background: var(--accent);
+      color: #fff;
       border-radius: 6px;
-      border: 1px solid rgba(59, 130, 246, 0.3);
+      font-weight: 600;
     }
 
-    /* Language Switcher Scrollable on Mobile */
+    /* Language Switcher Bar */
     .lang-switcher-wrap {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      max-width: 100%;
-    }
-
-    .lang-switcher-wrap::-webkit-scrollbar {
-      display: none;
+      padding-bottom: 2px;
     }
 
     .lang-switcher {
@@ -136,7 +130,7 @@
     /* Header / Hero */
     header {
       text-align: center;
-      padding: 48px 12px 36px 12px;
+      padding: 40px 12px 30px 12px;
     }
 
     .badge {
@@ -150,6 +144,21 @@
       font-size: 13px;
       padding: 6px 14px;
       border-radius: 9999px;
+      margin-bottom: 20px;
+    }
+
+    .lic-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-family: var(--mono);
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
@@ -178,42 +187,44 @@
       justify-content: center;
       gap: 8px;
       font-size: 13px;
-      color: #cbd5e1;
+      color: var(--text-muted);
       background: rgba(255, 255, 255, 0.03);
-      padding: 8px 16px;
-      border-radius: 30px;
       border: 1px solid var(--card-border);
-      margin-bottom: 24px;
+      padding: 8px 18px;
+      border-radius: 30px;
+      margin-bottom: 28px;
     }
 
-    .lic-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: rgba(34, 197, 94, 0.12);
-      color: #4ade80;
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      font-family: var(--mono);
-      font-size: 11px;
+    .author-tag strong {
+      color: #fff;
+    }
+
+    .author-tag span.badge-free {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
       padding: 2px 8px;
       border-radius: 6px;
+      font-weight: 700;
+      font-size: 11px;
     }
 
-    .action-buttons {
+    .cta-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
       justify-content: center;
+      gap: 14px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 11px 22px;
-      border-radius: 12px;
-      font-weight: 700;
+      font-family: var(--font);
       font-size: 14px;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 12px;
       text-decoration: none;
       transition: all 0.2s ease;
       cursor: pointer;
@@ -222,12 +233,14 @@
     .btn-primary {
       background: var(--accent);
       color: #fff;
-      box-shadow: 0 4px 14px var(--accent-glow);
+      box-shadow: 0 4px 16px var(--accent-glow);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .btn-primary:hover {
-      background: #2563eb;
+      background: #1d4ed8;
       transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--accent-glow);
     }
 
     .btn-secondary {
@@ -242,9 +255,13 @@
     }
 
     /* REAL LABEL PHOTO GALLERY */
+    .gallery-section {
+      margin: 48px 0 36px 0;
+    }
+
     .section-header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .section-title {
@@ -265,7 +282,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
     }
 
     .label-photo-card {
@@ -359,9 +376,9 @@
     /* FEATURES GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
     }
 
     .card {
@@ -378,134 +395,164 @@
     }
 
     .card h3 {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
+      color: #fff;
       margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #ffffff;
     }
 
     .card p {
+      font-size: 13.5px;
       color: var(--text-muted);
-      font-size: 14px;
       line-height: 1.6;
     }
 
-    /* DOWNLOAD TABLE SECTION */
-    .table-container {
-      background: var(--bg-card);
-      border: 1px solid var(--card-border);
+    /* SINGLE HERO DOWNLOAD CARD */
+    .download-container {
+      background: linear-gradient(135deg, rgba(18, 24, 38, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 22px;
+      padding: 36px 24px;
+      margin-bottom: 48px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-container::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .single-dl-box {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .file-icon-wrap {
+      width: 72px;
+      height: 72px;
       border-radius: 20px;
-      padding: 30px;
-      margin-bottom: 60px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px var(--accent-glow);
     }
 
-    .table-scroll-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 14px;
-      min-width: 600px;
-    }
-
-    th {
-      color: var(--text-muted);
-      font-weight: 600;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--card-border);
+    .file-name-title {
       font-family: var(--mono);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    td {
-      padding: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--text-main);
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:hover td {
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    .filename-code {
-      font-family: var(--mono);
-      font-size: 13px;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
-      padding: 4px 8px;
-      border-radius: 6px;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-    }
-
-    .action-link {
-      color: var(--accent-light);
-      text-decoration: none;
+      font-size: clamp(16px, 3vw, 22px);
       font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      word-break: break-all;
+    }
+
+    .file-subtext {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+      max-width: 540px;
+    }
+
+    .file-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .meta-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      color: #e2e8f0;
+      font-family: var(--mono);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: rgba(59, 130, 246, 0.1);
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      transition: all 0.2s;
     }
 
-    .action-link:hover {
-      background: var(--accent);
+    .btn-download-hero {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
       color: #fff;
+      font-family: var(--font);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px var(--accent-glow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
     }
 
-    /* QUICK SETUP / INSTRUCTIONS */
+    .btn-download-hero:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px var(--accent-glow);
+    }
+
+    /* INSTALLATION GUIDE */
+    .guide-section {
+      margin-bottom: 48px;
+    }
+
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
     .step-card {
-      background: rgba(255, 255, 255, 0.02);
+      background: var(--bg-card);
       border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 24px;
       position: relative;
     }
 
     .step-num {
-      position: absolute;
-      top: -12px;
-      left: 20px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
       background: var(--accent);
       color: #fff;
-      font-family: var(--mono);
-      font-size: 12px;
       font-weight: 800;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
+      font-size: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 2px 8px var(--accent-glow);
+      margin-bottom: 12px;
     }
 
     .step-title {
       font-size: 15px;
       font-weight: 700;
-      margin-top: 6px;
       margin-bottom: 8px;
       color: #fff;
     }
@@ -519,19 +566,19 @@
     /* LICENSE & ATTRIBUTION CARD */
     .license-card {
       background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.3);
       border-radius: 18px;
       padding: 24px;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
     .license-title {
       font-size: 16px;
       font-weight: 700;
-      color: #fff;
+      color: #34d399;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -624,8 +671,14 @@
         width: 100%;
       }
 
-      .table-container {
-        padding: 20px 14px;
+      .download-container {
+        padding: 24px 14px;
+      }
+
+      .btn-download-hero {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 15px;
       }
     }
   </style>
@@ -654,30 +707,30 @@
 
     <!-- Header / Hero -->
     <header>
-      <div class="badge" data-i18n="hero_badge">🔥 Bazis-Raskroy Moslashuvchan Tizimi</div>
-      <h1 data-i18n="hero_title">Cabix Bazis Tools</h1>
-      <p class="subtitle" data-i18n="hero_sub">Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketkalar va avtomatlashtirish to'plami.</p>
-      
-      <div class="author-tag">
-        <span data-i18n="author_lbl">Muallif:</span> <strong>iRealBy_3D</strong> &nbsp;|&nbsp; 
-        <span data-i18n="base_lbl">Asos:</span> <strong>Giblab</strong> &nbsp;|&nbsp; 
-        <span data-i18n="version_lbl">Versiya:</span> <strong>v1.0.1</strong> &nbsp;|&nbsp; 
-        <span class="lic-badge">CC BY-NC-SA 4.0 (Not-for-Sale)</span>
+      <div class="lic-badge" data-i18n="lic_badge">
+        🛡️ License: Free (Resale strictly prohibited!)
       </div>
-      
-      <div class="action-buttons">
-        <a href="https://github.com/irealby3d/cabix-bazis-tools" class="btn btn-primary" target="_blank">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span data-i18n="btn_github">GitHub Repositoriy</span>
-        </a>
-        <a href="#downloads" class="btn btn-secondary">
-          <span data-i18n="btn_download">Yuklab Olish (.lbl)</span>
-        </a>
+      <h1 data-i18n="hero_title">Cabix Bazis Tools</h1>
+      <p class="subtitle" data-i18n="hero_sub">Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketka va avtomatlashtirish tizimi.</p>
+
+      <div class="author-tag">
+        <span data-i18n="author_lbl">Muallif:</span> <strong>iRealBy_3D</strong>
+        &nbsp;|&nbsp;
+        <span data-i18n="base_lbl">Asos:</span> <strong>Giblab</strong>
+        &nbsp;|&nbsp;
+        <span data-i18n="version_lbl">Versiya:</span> <strong>v1.0.1 Universal</strong>
+        &nbsp;|&nbsp;
+        <span class="badge-free" data-i18n="tag_free">BEPUL / NOT FOR RESALE</span>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="#downloads" class="btn btn-primary" data-i18n="btn_download">Yuklab Olish (.lbl) ⬇️</a>
+        <a href="https://github.com/irealby3d/cabix-bazis-tools" class="btn btn-secondary" target="_blank" data-i18n="btn_github">GitHub Repositoriy ↗</a>
       </div>
     </header>
 
-    <!-- REAL LABEL PHOTO GALLERY -->
-    <section style="margin-bottom: 60px;">
+    <!-- Real Label Photo Gallery -->
+    <section class="gallery-section">
       <div class="section-header">
         <h2 class="section-title" data-i18n="gallery_title">Haqiqiy Etiketka Namunalari</h2>
         <p class="section-desc" data-i18n="gallery_sub">Bazis-Raskroy dasturidan chop etilgan haqiqiy etiketkalar ko'rinishi (kattalashtirish uchun bosing):</p>
@@ -728,12 +781,12 @@
     <!-- Features Grid -->
     <div class="grid">
       <div class="card">
-        <h3 data-i18n="feat1_title">🌐 6 Ta Tilda Maxsus Shablonlar</h3>
-        <p data-i18n="feat1_desc">MDH va xalqaro foydalanuvchilar uchun 100% ona tiliga moslashtirilgan sozlamalar va matnlar (UZ, RU, KZ, KG, TJ, EN).</p>
+        <h3 data-i18n="feat1_title">🌐 Universal Moslashuvchan Shablon</h3>
+        <p data-i18n="feat1_desc">Barcha MDH va xalqaro foydalanuvchilar uchun mos, 58×40 dan 100×60 mm gacha bo'lgan lentaga avtomatik moslashuvchi yagona shablon.</p>
       </div>
       <div class="card">
         <h3 data-i18n="feat2_title">📐 17 Pog'onali Proporsional Masshtab</h3>
-        <p data-i18n="feat2_desc">58×40 dan 100×60 mm gacha bo'lgan barcha qog'oz o'lchamlariga matn, QR-kod va ikonkalar avtomatik mutanosib moslashadi.</p>
+        <p data-i18n="feat2_desc">Printer o'lchami o'zgarganda shriftlar, QR-kod va ikonkalar avtomatik ravishda mutanosib kattalashadi va kichrayadi.</p>
       </div>
       <div class="card">
         <h3 data-i18n="feat3_title">✂️ Nol To'qnashuv Kafolati</h3>
@@ -745,101 +798,61 @@
       </div>
     </div>
 
-    <!-- Download Section -->
-    <div class="table-container" id="downloads">
-      <div class="section-header" style="text-align: left; margin-bottom: 20px;">
-        <h2 class="section-title" data-i18n="dl_title">Rasmiy Shablonlar To'plami (.lbl)</h2>
-        <p class="section-desc" style="margin: 0;" data-i18n="dl_sub">O'zingizga mos tildagi shablonni to'g'ridan-to'g'ri yuklab oling:</p>
-      </div>
+    <!-- Hero Download Section -->
+    <div class="download-container" id="downloads">
+      <div class="single-dl-box">
+        <div class="file-icon-wrap">🏷️</div>
+        <div class="badge" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #34d399; margin-bottom: 12px;" data-i18n="lic_badge">
+          🛡️ License: Free (Resale strictly prohibited!)
+        </div>
+        <h2 class="file-name-title">Cabix_Etiket_58x40_80x60_v1.0.1.lbl</h2>
+        <p class="file-subtext" data-i18n="master_card_desc">Bazis-Raskroy uchun 17-pog'onali dinamik proporsional universal shablon (58×40 dan 100×60 mm gacha).</p>
+        
+        <div class="file-meta-pills">
+          <span class="meta-pill">📏 58x40 – 100x60 mm</span>
+          <span class="meta-pill">⚡ v1.0.1 Universal</span>
+          <span class="meta-pill">⚖️ CC BY-NC-SA 4.0</span>
+          <span class="meta-pill">✍️ iRealBy_3D | Giblab</span>
+        </div>
 
-      <div class="table-scroll-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n="th_lang">Til / Versiya</th>
-              <th data-i18n="th_file">Fayl Nomi</th>
-              <th data-i18n="th_desc">Xususiyati</th>
-              <th data-i18n="th_action">Havola</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>🌐 Universal Master</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1.lbl</span></td>
-              <td data-i18n="master_row_desc">Standart universal shablon (58×40 – 100×60 mm)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-            <tr>
-              <td><strong>🇺🇿 O'zbekcha</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1_UZ.lbl</span></td>
-              <td data-i18n="uz_row_desc">100% O'zbekcha (Soni, Qoldiq, Foydali qoldiq)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1_UZ.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-            <tr>
-              <td><strong>🇷🇺 Русский</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1_RU.lbl</span></td>
-              <td data-i18n="ru_row_desc">100% Ruscha (Кол-во, Остаток, Деловой остаток)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1_RU.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-            <tr>
-              <td><strong>🇰🇿 Қазақша</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1_KZ.lbl</span></td>
-              <td data-i18n="kz_row_desc">100% Qozoqcha (Саны, Қалдық, Іскерлік қалдық)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1_KZ.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-            <tr>
-              <td><strong>🇰🇬 Кыргызча</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1_KG.lbl</span></td>
-              <td data-i18n="kg_row_desc">100% Qirg'izcha (Саны, Калдык, Иштиктүү калдык)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1_KG.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-            <tr>
-              <td><strong>🇹🇯 Тоҷикӣ</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1_TJ.lbl</span></td>
-              <td data-i18n="tj_row_desc">100% Tojikcha (Шумора, Боқимонда, Боқимондаи корӣ)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1_TJ.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-            <tr>
-              <td><strong>🇬🇧 English</strong></td>
-              <td><span class="filename-code">Cabix_Etiket_58x40_80x60_v1.0.1_EN.lbl</span></td>
-              <td data-i18n="en_row_desc">100% Inglizcha (Qty, Offcut, Usable offcut)</td>
-              <td><a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1_EN.lbl" class="action-link" download data-i18n="btn_dl">Yuklab Olish ⬇️</a></td>
-            </tr>
-          </tbody>
-        </table>
+        <a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1.lbl" class="btn-download-hero" download data-i18n="btn_dl_single">
+          <span>Yuklab Olish (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️</span>
+        </a>
       </div>
     </div>
 
-    <!-- Quick Setup / Instructions -->
-    <div class="table-container" style="margin-bottom: 60px;">
-      <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+    <!-- Quick Guide Section -->
+    <section class="guide-section">
+      <div class="section-header">
         <h2 class="section-title" data-i18n="guide_title">O'rnatish va Sozlash Qo'llanmasi</h2>
-        <p class="section-desc" style="margin: 0;" data-i18n="guide_sub">Bazis-Raskroy dasturiga shablonni 3 daqiqada o'rnating:</p>
+        <p class="section-desc" data-i18n="guide_sub">Bazis-Raskroy dasturiga shablonni 3 daqiqada o'rnating:</p>
       </div>
 
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-num">1</div>
-          <div class="step-title" data-i18n="step1_title">Shablonni Yuklab Oling</div>
-          <div class="step-text" data-i18n="step1_desc">Yuqoridagi jadvaldan o'zingizga ma'qul til variantidagi <code>.lbl</code> faylni yuklab oling va qulay papkaga saqlang.</div>
+          <h4 class="step-title" data-i18n="step1_title">Shablonni Yuklab Oling</h4>
+          <p class="step-text" data-i18n="step1_desc">Yuqoridagi tugma orqali Cabix_Etiket_58x40_80x60_v1.0.1.lbl faylini yuklab oling va kompyuteringizga saqlang.</p>
         </div>
+
         <div class="step-card">
           <div class="step-num">2</div>
-          <div class="step-title" data-i18n="step2_title">Bazis-Raskroy Sozlamalari</div>
-          <div class="step-text" data-i18n="step2_desc">Bazis-Raskroy dasturida <strong>Настройка -> Параметры -> Бирки (Этикетки)</strong> bo'limiga o'ting va shablonni yuklang (Загрузить).</div>
+          <h4 class="step-title" data-i18n="step2_title">Bazis-Raskroy Sozlamalari</h4>
+          <p class="step-text" data-i18n="step2_desc">Bazis-Raskroy dasturida Настройка -> Параметры -> Бирки (Этикетки) bo'limiga o'ting va shablonni yuklang (Загрузить).</p>
         </div>
+
         <div class="step-card">
           <div class="step-num">3</div>
-          <div class="step-title" data-i18n="step3_title">O'lchamni Belgilang</div>
-          <div class="step-text" data-i18n="step3_desc">Termoprinteringiz qog'ozi o'lchamini (masalan: 58×40 yoki 80×60 mm) kiriting. Qolgan barcha masshtabni tizim avtomatik sozlaydi!</div>
+          <h4 class="step-title" data-i18n="step3_title">O'lchamni Belgilang</h4>
+          <p class="step-text" data-i18n="step3_desc">Termoprinteringiz qog'ozi o'lchamini (masalan: 58×40 yoki 80×60 mm) kiriting. Qolgan barcha masshtabni tizim avtomatik sozlaydi!</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- License & Attribution Card -->
+    <!-- License & Legal Card -->
     <div class="license-card">
       <div class="license-title">
-        <span>📜</span>
+        <span>🛡️</span>
         <span data-i18n="lic_card_title">Litsenziya va Mualliflik Huquqlari</span>
       </div>
       <div class="license-body">
@@ -848,7 +861,7 @@
         </p>
         <p style="margin-top: 8px;" data-i18n="lic_card_p2">
           <strong>Asl asos:</strong> Giblab ochiq shabloni &nbsp;|&nbsp; 
-          <strong>Arxitektura, 17-pog'onali masshtab va modifikatsiya:</strong> iRealBy_3D &nbsp;|&nbsp; 
+          <strong>Arxitektura va 17-pog'onali masshtab:</strong> iRealBy_3D &nbsp;|&nbsp; 
           <strong>Tijoriy sotish qat'iyan taqiqlanadi!</strong> Barcha mebel ustalari va sexlar uchun bepul.
         </p>
       </div>
@@ -857,7 +870,7 @@
     <!-- Footer -->
     <footer>
       <p>&copy; 2026 Cabix Bazis Tools. <span data-i18n="footer_author">Muallif:</span> <strong>iRealBy_3D</strong>. <span data-i18n="footer_proj">Loyiha:</span> <a href="https://github.com/irealby3d/cabix-bazis-tools" target="_blank">irealby3d/cabix-bazis-tools</a></p>
-      <p style="margin-top: 6px; font-size: 12px; color: #64748b;">Licensed under CC BY-NC-SA 4.0 (Non-Commercial / Free for Furniture Makers)</p>
+      <p style="margin-top: 6px; font-size: 12px; color: #64748b;">License: Free (Resale strictly prohibited!) — CC BY-NC-SA 4.0</p>
     </footer>
   </div>
 
@@ -871,14 +884,15 @@
     // Multilingual Translations Dictionary (6 Languages)
     const translations = {
       uz: {
-        hero_badge: "🔥 Bazis-Raskroy Moslashuvchan Tizimi",
+        lic_badge: "🛡️ Litsenziya: Bepul (Sotish qat'iyan taqiqlanadi!)",
         hero_title: "Cabix Bazis Tools",
-        hero_sub: "Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketkalar va avtomatlashtirish to'plami.",
+        hero_sub: "Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketka va avtomatlashtirish tizimi.",
         author_lbl: "Muallif:",
         base_lbl: "Asos:",
         version_lbl: "Versiya:",
-        btn_github: "GitHub Repositoriy",
-        btn_download: "Yuklab Olish (.lbl)",
+        tag_free: "BEPUL / NOT FOR RESALE",
+        btn_github: "GitHub Repositoriy ↗",
+        btn_download: "Yuklab Olish (.lbl) ⬇️",
         gallery_title: "Haqiqiy Etiketka Namunalari",
         gallery_sub: "Bazis-Raskroy dasturidan chop etilgan haqiqiy etiketkalar ko'rinishi (kattalashtirish uchun bosing):",
         card_part_tag: "Standart Detal",
@@ -890,51 +904,40 @@
         card_offcut_tag: "Oddiy Qoldiq",
         card_offcut_title: "Qoldiq (931 x 316 mm)",
         card_offcut_desc: "Kichik qoldiqlar uchun optimallashtirilgan, tezkor skanerlash uchun katta QR-kodli ombor etiketkasi.",
-        feat1_title: "🌐 6 Ta Tilda Maxsus Shablonlar",
-        feat1_desc: "MDH va xalqaro foydalanuvchilar uchun 100% ona tiliga moslashtirilgan sozlamalar va matnlar (UZ, RU, KZ, KG, TJ, EN).",
+        feat1_title: "🌐 Universal Moslashuvchan Shablon",
+        feat1_desc: "Barcha MDH va xalqaro foydalanuvchilar uchun mos, 58×40 dan 100×60 mm gacha bo'lgan lentaga avtomatik moslashuvchi yagona shablon.",
         feat2_title: "📐 17 Pog'onali Proporsional Masshtab",
-        feat2_desc: "58×40 dan 100×60 mm gacha bo'lgan barcha qog'oz o'lchamlariga matn, QR-kod va ikonkalar avtomatik mutanosib moslashadi.",
+        feat2_desc: "Printer o'lchami o'zgarganda shriftlar, QR-kod va ikonkalar avtomatik ravishda mutanosib kattalashadi va kichrayadi.",
         feat3_title: "✂️ Nol To'qnashuv Kafolati",
         feat3_desc: "Kromka chiziqlari o'lchamlar ustiga tushmaydi. Har bir blok matematik hisoblangan xavfsiz oraliqda mustaqil taqsimlanadi.",
         feat4_title: "📦 Qoldiq (Остаток) Maxsus Moduli",
         feat4_desc: "Qoldiq detallar omborini avtomatlashtirish uchun yirik QR-kodli va to'liq ma'lumotli alohida professional ko'rinish.",
-        dl_title: "Rasmiy Shablonlar To'plami (.lbl)",
-        dl_sub: "O'zingizga mos tildagi shablonni to'g'ridan-to'g'ri yuklab oling:",
-        th_lang: "Til / Versiya",
-        th_file: "Fayl Nomi",
-        th_desc: "Xususiyati",
-        th_action: "Havola",
-        master_row_desc: "Standart universal shablon (58×40 – 100×60 mm)",
+        master_card_desc: "Bazis-Raskroy uchun 17-pog'onali dinamik proporsional universal shablon (58×40 dan 100×60 mm gacha).",
+        btn_dl_single: "Yuklab Olish (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️",
         guide_title: "O'rnatish va Sozlash Qo'llanmasi",
         guide_sub: "Bazis-Raskroy dasturiga shablonni 3 daqiqada o'rnating:",
         step1_title: "Shablonni Yuklab Oling",
-        step1_desc: "Yuqoridagi jadvaldan o'zingizga ma'qul til variantidagi .lbl faylni yuklab oling va qulay papkaga saqlang.",
+        step1_desc: "Yuqoridagi tugma orqali Cabix_Etiket_58x40_80x60_v1.0.1.lbl faylini yuklab oling va kompyuteringizga saqlang.",
         step2_title: "Bazis-Raskroy Sozlamalari",
         step2_desc: "Bazis-Raskroy dasturida Настройка -> Параметры -> Бирки (Этикетки) bo'limiga o'ting va shablonni yuklang (Загрузить).",
         step3_title: "O'lchamni Belgilang",
         step3_desc: "Termoprinteringiz qog'ozi o'lchamini (masalan: 58×40 yoki 80×60 mm) kiriting. Qolgan barcha masshtabni tizim avtomatik sozlaydi!",
         lic_card_title: "Litsenziya va Mualliflik Huquqlari",
         lic_card_p1: "Ushbu loyiha Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) litsenziyasi ostida tarqatiladi.",
-        lic_card_p2: "Asl asos: Giblab ochiq shabloni | Arxitektura, 17-pog'onali masshtab va modifikatsiya: iRealBy_3D | Tijoriy sotish qat'iyan taqiqlanadi! Barcha mebel ustalari va sexlar uchun bepul.",
-        btn_dl: "Yuklab Olish ⬇️",
-        uz_row_desc: "100% O'zbekcha (Soni, Qoldiq, Foydali qoldiq)",
-        ru_row_desc: "100% Ruscha (Кол-во, Остаток, Деловой остаток)",
-        kz_row_desc: "100% Qozoqcha (Саны, Қалдық, Іскерлік қалдық)",
-        kg_row_desc: "100% Qirg'izcha (Саны, Калдык, Иштиктүү калдык)",
-        tj_row_desc: "100% Tojikcha (Шумора, Боқимонда, Боқимондаи корӣ)",
-        en_row_desc: "100% Inglizcha (Qty, Offcut, Usable offcut)",
+        lic_card_p2: "Asl asos: Giblab ochiq shabloni | Arxitektura va 17-pog'onali masshtab: iRealBy_3D | Tijoriy sotish qat'iyan taqiqlanadi! Barcha mebel ustalari va sexlar uchun bepul.",
         footer_author: "Muallif:",
         footer_proj: "Loyiha:"
       },
       ru: {
-        hero_badge: "🔥 Адаптивная Система Базис-Раскрой",
+        lic_badge: "🛡️ Лицензия: Бесплатно (Продажа строго запрещена!)",
         hero_title: "Cabix Bazis Tools",
-        hero_sub: "100% универсальный набор 17-ступенчатых пропорциональных адаптивных этикеток и автоматизации для Базис-Мебельщик и Базис-Раскрой.",
+        hero_sub: "100% универсальная 17-ступенчатая пропорциональная адаптивная этикетка и система автоматизации для Базис-Мебельщик и Базис-Раскрой.",
         author_lbl: "Автор:",
         base_lbl: "Основа:",
         version_lbl: "Версия:",
-        btn_github: "GitHub Репозиторий",
-        btn_download: "Скачать (.lbl)",
+        tag_free: "БЕСПЛАТНО / NOT FOR RESALE",
+        btn_github: "GitHub Репозиторий ↗",
+        btn_download: "Скачать (.lbl) ⬇️",
         gallery_title: "Реальные Образцы Этикеток",
         gallery_sub: "Внешний вид этикеток, напечатанных из Базис-Раскрой (нажмите для увеличения):",
         card_part_tag: "Стандартная Деталь",
@@ -946,51 +949,40 @@
         card_offcut_tag: "Простой Остаток",
         card_offcut_title: "Остаток (931 x 316 мм)",
         card_offcut_desc: "Оптимизирован для небольших обрезков с крупным QR-кодом для быстрого сканирования.",
-        feat1_title: "🌐 Отдельные Шаблоны на 6 Языках",
-        feat1_desc: "100% нативная локализация параметров и текста для пользователей СНГ и мира (UZ, RU, KZ, KG, TJ, EN).",
+        feat1_title: "🌐 Универсальный Адаптивный Шаблон",
+        feat1_desc: "Единый шаблон для всех пользователей СНГ и мира, автоматически масштабируемый под ленту от 58×40 до 100×60 мм.",
         feat2_title: "📐 17-Ступенчатый Пропорциональный Масштаб",
         feat2_desc: "Текст, QR-коды и иконки пропорционально масштабируются под любой размер бумаги от 58×40 до 100×60 мм.",
         feat3_title: "✂️ Гарантия Нулевых Наложений",
         feat3_desc: "Линии кромки и габариты никогда не пересекаются. Каждый информационный блок строго изолирован.",
         feat4_title: "📦 Специальный Модуль Остатков",
         feat4_desc: "Профессиональный отдельный вид для автоматизации склада остатков с крупным QR-кодом.",
-        dl_title: "Официальный Набор Шаблонов (.lbl)",
-        dl_sub: "Скачайте готовый шаблон на нужном вам языке напрямую:",
-        th_lang: "Язык / Версия",
-        th_file: "Имя Файла",
-        th_desc: "Особенности",
-        th_action: "Ссылка",
-        master_row_desc: "Стандартный универсальный шаблон (58×40 – 100×60 мм)",
+        master_card_desc: "17-ступенчатый динамический пропорциональный шаблон для Базис-Раскрой (58×40 – 100×60 мм).",
+        btn_dl_single: "Скачать (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️",
         guide_title: "Инструкция по Установке и Настройке",
         guide_sub: "Установите шаблон в Базис-Раскрой за 3 минуты:",
         step1_title: "Скачайте Шаблон",
-        step1_desc: "Выберите нужный языковой файл .lbl из таблицы выше и сохраните в удобную папку.",
+        step1_desc: "Скачайте файл Cabix_Etiket_58x40_80x60_v1.0.1.lbl по кнопке выше и сохраните в удобную папку.",
         step2_title: "Настройки Базис-Раскрой",
         step2_desc: "В программе Базис-Раскрой откройте Настройка -> Параметры -> Бирки (Этикетки) и нажмите «Загрузить».",
         step3_title: "Задайте Размер",
         step3_desc: "Укажите размер этикетки вашего термопринтера (напр. 58×40 или 80×60 мм). Всё остальное система рассчитает автоматически!",
         lic_card_title: "Лицензия и Авторские Права",
         lic_card_p1: "Данный проект распространяется по лицензии Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).",
-        lic_card_p2: "Исходная основа: открытый шаблон Giblab | Архитектура, 17-ступенчатый масштаб и модификации: iRealBy_3D | Коммерческая продажа строго запрещена! Бесплатно для всех мебельщиков.",
-        btn_dl: "Скачать ⬇️",
-        uz_row_desc: "100% Узбекский (Soni, Qoldiq, Foydali qoldiq)",
-        ru_row_desc: "100% Русский (Кол-во, Остаток, Деловой остаток)",
-        kz_row_desc: "100% Казахский (Саны, Қалдық, Іскерлік қалдық)",
-        kg_row_desc: "100% Кыргызский (Саны, Калдык, Иштиктүү калдык)",
-        tj_row_desc: "100% Таджикский (Шумора, Боқимонда, Боқимондаи корӣ)",
-        en_row_desc: "100% Английский (Qty, Offcut, Usable offcut)",
+        lic_card_p2: "Исходная основа: открытый шаблон Giblab | Архитектура и 17-ступенчатый масштаб: iRealBy_3D | Коммерческая продажа строго запрещена! Бесплатно для всех мебельщиков.",
         footer_author: "Автор:",
         footer_proj: "Проект:"
       },
       kz: {
-        hero_badge: "🔥 Базис-Раскрой Бейімделгіш Жүйесі",
+        lic_badge: "🛡️ Лицензия: Тегін (Сатуға қатаң тыйым салынады!)",
         hero_title: "Cabix Bazis Tools",
-        hero_sub: "Базис-Мебельщик пен Базис-Раскрой үшін 100% әмбебап, 17 сатылы пропорционалды этикеткалар жинағы.",
+        hero_sub: "Базис-Мебельщик пен Базис-Раскрой үшін 100% әмбебап, 17 сатылы пропорционалды этикеткалар жүйесі.",
         author_lbl: "Авторы:",
         base_lbl: "Негізі:",
         version_lbl: "Нұсқасы:",
-        btn_github: "GitHub Репозиторийі",
-        btn_download: "Жүктеп Алу (.lbl)",
+        tag_free: "ТЕГІН / NOT FOR RESALE",
+        btn_github: "GitHub Репозиторийі ↗",
+        btn_download: "Жүктеп Алу (.lbl) ⬇️",
         gallery_title: "Нақты Этикетка Үлгілері",
         gallery_sub: "Базис-Раскрой бағдарламасынан басып шығарылған нақты этикеткалар көрінісі (үлкейту үшін басыңыз):",
         card_part_tag: "Стандартты Бөлшек",
@@ -1002,25 +994,20 @@
         card_offcut_tag: "Қарапайым Қалдық",
         card_offcut_title: "Қалдық (931 x 316 мм)",
         card_offcut_desc: "Шағын қалдықтар үшін оңтайландырылған, жылдам сканерлеуге арналған үлкен QR-коды бар қойма этикеткасы.",
-        feat1_title: "🌐 6 Тілде Арнайы Үлгілер",
-        feat1_desc: "ТМД және әлем пайдаланушылары үшін 100% ана тіліне бейімделген баптаулар (UZ, RU, KZ, KG, TJ, EN).",
+        feat1_title: "🌐 Әмбебап Бейімделгіш Үлгі",
+        feat1_desc: "Кез келген өлшемге (58×40-тан 100×60 мм-ге дейін) автоматты түрде бейімделетін бірыңғай үлгі.",
         feat2_title: "📐 17 Сатылы Пропорционалды Масштаб",
         feat2_desc: "58×40-тан 100×60 мм-ге дейінгі барлық өлшемдерге мәтін мен QR-код автоматты түрде бейімделеді.",
         feat3_title: "✂️ Нөл Қақтығыс Кепілдігі",
         feat3_desc: "Жиек сызықтары өлшемдермен қақтығыспайды. Әрбір ақпараттық блок қауіпсіз аралықпен орналасқан.",
         feat4_title: "📦 Қалдықтарға Арналған Модуль",
         feat4_desc: "Қалдықтар қоймасын автоматтандыру үшін ірі QR-кодты кәсіби бөлек көрініс.",
-        dl_title: "Ресми Үлгілер Жинағы (.lbl)",
-        dl_sub: "Өзіңізге қажетті тілдегі дайын үлгіні жүктеп алыңыз:",
-        th_lang: "Тіл / Нұсқа",
-        th_file: "Файл Атауы",
-        th_desc: "Ерекшелігі",
-        th_action: "Сілтеме",
-        master_row_desc: "Стандартты әмбебап үлгі (58×40 – 100×60 мм)",
+        master_card_desc: "Базис-Раскрой үшін 17 сатылы динамикалық пропорционалды әмбебап үлгі (58×40 – 100×60 мм).",
+        btn_dl_single: "Жүктеп Алу (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️",
         guide_title: "Орнату және Баптау Нұсқаулығы",
         guide_sub: "Базис-Раскрой бағдарламасына үлгіні 3 минутта орнатыңыз:",
         step1_title: "Үлгіні Жүктеп Алыңыз",
-        step1_desc: "Жоғарыдағы кестеден қажетті тілдегі .lbl файлын жүктеп алып, ыңғайлы қалтаға сақтаңыз.",
+        step1_desc: "Жоғарыдағы батырма арқылы Cabix_Etiket_58x40_80x60_v1.0.1.lbl үлгісін жүктеп алып, сақтаңыз.",
         step2_title: "Базис-Раскрой Баптаулары",
         step2_desc: "Базис-Раскрой бағдарламасында Баптау -> Параметрлер -> Этикеткалар бөліміне өтіп, үлгіні жүктеңіз.",
         step3_title: "Өлшемді Орнатыңыз",
@@ -1028,25 +1015,19 @@
         lic_card_title: "Лицензия және Авторлық Құқықтар",
         lic_card_p1: "Бұл жоба Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) лицензиясымен таратылады.",
         lic_card_p2: "Бастапқы негіз: ашық Giblab үлгісі | Архитектура және 17 сатылы масштаб: iRealBy_3D | Коммерциялық мақсатта сатуға қатаң тыйым салынады! Барлық жиһазшылар үшін тегін.",
-        btn_dl: "Жүктеп Алу ⬇️",
-        uz_row_desc: "100% Өзбекше (Soni, Qoldiq, Foydali qoldiq)",
-        ru_row_desc: "100% Орысша (Кол-во, Остаток, Деловой остаток)",
-        kz_row_desc: "100% Қазақша (Саны, Қалдық, Іскерлік қалдық)",
-        kg_row_desc: "100% Қырғызша (Саны, Калдык, Иштиктүү калдык)",
-        tj_row_desc: "100% Тәжікше (Шумора, Боқимонда, Боқимондаи корӣ)",
-        en_row_desc: "100% Ағылшынша (Qty, Offcut, Usable offcut)",
         footer_author: "Авторы:",
         footer_proj: "Жоба:"
       },
       kg: {
-        hero_badge: "🔥 Базис-Раскрой Ыңгайлашкан Тутуму",
+        lic_badge: "🛡️ Лицензия: Акысыз (Сатууга катуу тыюу салынат!)",
         hero_title: "Cabix Bazis Tools",
-        hero_sub: "Базис-Мебельщик жана Базис-Раскрой үчүн 100% универсалдуу, 17 баскычтуу пропорционалдуу адаптивдүү этикеткалар жыйнагы.",
+        hero_sub: "Базис-Мебельщик жана Базис-Раскрой үчүн 100% универсалдуу, 17 баскычтуу пропорционалдуу адаптивдүү этикеткалар тутуму.",
         author_lbl: "Автору:",
         base_lbl: "Негизи:",
         version_lbl: "Версиясы:",
-        btn_github: "GitHub Репозиторийи",
-        btn_download: "Жүктөп Алуу (.lbl)",
+        tag_free: "АКЫСЫЗ / NOT FOR RESALE",
+        btn_github: "GitHub Репозиторийи ↗",
+        btn_download: "Жүктөп Алуу (.lbl) ⬇️",
         gallery_title: "Чыныгы Этикетка Үлгүлөрү",
         gallery_sub: "Базис-Раскрой программасынан басылган чыныгы этикеткалар (чоңойтуу үчүн басыңыз):",
         card_part_tag: "Стандарттык Бөлүк",
@@ -1058,25 +1039,20 @@
         card_offcut_tag: "Жөнөкөй Калдык",
         card_offcut_title: "Калдык (931 x 316 мм)",
         card_offcut_desc: "Чакан калдыктар үчүн оптималдаштырылган, тез сканерлөө үчүн чоң QR-коддуу кампа этикеткасы.",
-        feat1_title: "🌐 6 Тилдеги Атайын Үлгүлөр",
-        feat1_desc: "КМШ жана дүйнө колдонуучулары үчүн 100% эне тилине ылайыкташтырылган (UZ, RU, KZ, KG, TJ, EN).",
+        feat1_title: "🌐 Универсалдуу Ыңгайлашкан Үлгү",
+        feat1_desc: "Бардык өлчөмдөргө (58×40тан 100×60 ммге чейин) автоматтык түрүндө ыңгайлашкан бирден-бир үлгү.",
         feat2_title: "📐 17 Баскычтуу Пропорционалдуу Масштаб",
-        feat2_desc: "58×40тан 100×60 ммге чейинки бардык өлчөмдөргө текст жана QR-код автоматтык түрдө шайкештелет.",
+        feat2_desc: "58×40тан 100×60 ммге чейинки бардык өлчөмдөргө текст жана QR-код автоматтык түрүндө шайкештелет.",
         feat3_title: "✂️ Нөл Кагылышуу Кепилдиги",
         feat3_desc: "Кромка сызыктары өлчөмдөр менен эч качан кагылышпайт. Ар бир маалыматтык блок коопсуз аралыкта жайгашат.",
         feat4_title: "📦 Калдыктар Үчүн Атайын Модуль",
         feat4_desc: "Калдыктар кампасын автоматташтыруу үчүн ири QR-коддуу кесиптик өзүнчө көрүнүш.",
-        dl_title: "Расмий Үлгүлөр Жыйнагы (.lbl)",
-        dl_sub: "Өзүңүзгө керектүү тилдеги үлгүнү түз жүктөп алыңыз:",
-        th_lang: "Тил / Версия",
-        th_file: "Файлдын Аты",
-        th_desc: "Өзгөчөлүгү",
-        th_action: "Шилтеме",
-        master_row_desc: "Стандарттык универсалдуу үлгү (58×40 – 100×60 мм)",
+        master_card_desc: "Базис-Раскрой үчүн 17 баскычтуу динамикалык пропорционалдуу универсалдуу үлгү (58×40 – 100×60 мм).",
+        btn_dl_single: "Жүктөп Алуу (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️",
         guide_title: "Орнотуу жана Жөндөө Колдонмосу",
         guide_sub: "Базис-Раскрой программасына үлгүнү 3 мүнөттө орнотуңуз:",
         step1_title: "Үлгүнү Жүктөп Алыңыз",
-        step1_desc: "Жогорудагы таблицадан керектүү тилдеги .lbl файлын жүктөп алып, ыңгайлуу папкага сактаңыз.",
+        step1_desc: "Жогорудагы баскыч аркылуу Cabix_Etiket_58x40_80x60_v1.0.1.lbl үлгүсүн жүктөп алып, сактаңыз.",
         step2_title: "Базис-Раскрой Жөндөөлөрү",
         step2_desc: "Базис-Раскрой программасында Жөндөө -> Параметрлер -> Этикеткалар бөлүмүнө өтүп, үлгүнү жүктөңүз.",
         step3_title: "Өлчөмдү Белгилеңиз",
@@ -1084,25 +1060,19 @@
         lic_card_title: "Лицензия жана Автордук Укуктар",
         lic_card_p1: "Бул долбоор Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) лицензиясы менен таратылат.",
         lic_card_p2: "Түпкү негиз: ачык Giblab үлгүсү | Архитектура жана 17 баскычтуу масштаб: iRealBy_3D | Коммерциялык сатууга катуу тыюу салынат! Бардык эмерекчилер үчүн акысыз.",
-        btn_dl: "Жүктөп Алуу ⬇️",
-        uz_row_desc: "100% Өзбекче (Soni, Qoldiq, Foydali qoldiq)",
-        ru_row_desc: "100% Орусча (Кол-во, Остаток, Деловой остаток)",
-        kz_row_desc: "100% Казакча (Саны, Қалдық, Іскерлік қалдық)",
-        kg_row_desc: "100% Кыргызча (Саны, Калдык, Иштиктүү калдык)",
-        tj_row_desc: "100% Тажикче (Шумора, Боқимонда, Боқимондаи корӣ)",
-        en_row_desc: "100% Англисче (Qty, Offcut, Usable offcut)",
         footer_author: "Автору:",
         footer_proj: "Долбоор:"
       },
       tj: {
-        hero_badge: "🔥 Низоми Мутобиқшавандаи Базис-Раскрой",
+        lic_badge: "🛡️ Иҷозатнома: Ройгон (Фурӯш қатъиян манъ аст!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "Маҷмӯаи 100% универсалии тамғакоғазҳои мутобиқшавандаи 17-зинагӣ ва автоматикунонӣ барои Базис-Мебелшик ва Базис-Раскрой.",
         author_lbl: "Муаллиф:",
         base_lbl: "Асос:",
         version_lbl: "Версия:",
-        btn_github: "GitHub Репозиторий",
-        btn_download: "Боргирӣ (.lbl)",
+        tag_free: "РОЙГОН / NOT FOR RESALE",
+        btn_github: "GitHub Репозиторий ↗",
+        btn_download: "Боргирӣ (.lbl) ⬇️",
         gallery_title: "Намунаҳои Воқеии Тамғакоғазҳо",
         gallery_sub: "Намуди зоҳирии тамғакоғазҳои аз Базис-Раскрой чопшуда (барои калон кардан пахш кунед):",
         card_part_tag: "Ҷузъи Стандартӣ",
@@ -1114,25 +1084,20 @@
         card_offcut_tag: "Боқимондаи Оддӣ",
         card_offcut_title: "Боқимонда (931 x 316 мм)",
         card_offcut_desc: "Барои боқимондаҳои хурд бо QR-коди калон барои зуд скан кардан мутобиқ карда шудааст.",
-        feat1_title: "🌐 Шаблонҳои Махсус бо 6 Забон",
-        feat1_desc: "Мутобиқсозии 100% нативӣ ба забони модарӣ барои корбарони ИДМ ва ҷаҳон (UZ, RU, KZ, KG, TJ, EN).",
+        feat1_title: "🌐 Шаблони Универсалии Мутобиқшаванда",
+        feat1_desc: "Шаблони ягонае, ки ба ҳамаи андозаҳо (аз 58×40 то 100×60 мм) ба таври худкор мутобиқ мешавад.",
         feat2_title: "📐 Миқёси Пропорсионалии 17-Зинагӣ",
         feat2_desc: "Матн, QR-кодҳо ва нишонаҳо ба ҳама гуна андозаи коғаз аз 58×40 то 100×60 мм худкор мутобиқ мешаванд.",
         feat3_title: "✂️ Кафолати Сифрии Бархӯрд",
         feat3_desc: "Хатҳои кромка ҳеҷ гоҳ бо андозаҳо бархӯрд намекунанд. Ҳар як блоки иттилоотӣ ҷудо ҷойгир шудааст.",
         feat4_title: "📦 Модули Махсус барои Боқимондаҳо",
         feat4_desc: "Намуди алоҳидаи касбӣ бо QR-коди бузург барои автоматикунонии анбори боқимондаҳо.",
-        dl_title: "Маҷмӯаи Расмии Шаблонҳо (.lbl)",
-        dl_sub: "Шаблони дилхоҳатонро бо забони лозима мустақиман боргирӣ намоед:",
-        th_lang: "Забон / Версия",
-        th_file: "Номи Файл",
-        th_desc: "Хусусият",
-        th_action: "Пайванд",
-        master_row_desc: "Шаблони стандартии универсалӣ (58×40 – 100×60 мм)",
+        master_card_desc: "Шаблони 17-зинагии динамикии пропорсионалии универсалӣ барои Базис-Раскрой (58×40 – 100×60 мм).",
+        btn_dl_single: "Боргирӣ (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️",
         guide_title: "Дастури Насб ва Танзим",
         guide_sub: "Шаблонро дар Базис-Раскрой дар 3 дақиқа насб намоед:",
         step1_title: "Шаблонро Боргирӣ Кунед",
-        step1_desc: "Аз ҷадвали боло файли .lbl-ро бо забони лозима боргирӣ карда, ба ҷузвдони мувофиқ гузоред.",
+        step1_desc: "Тавассути тугмаи боло шаблони Cabix_Etiket_58x40_80x60_v1.0.1.lbl-ро боргирӣ намуда, захира кунед.",
         step2_title: "Танзимоти Базис-Раскрой",
         step2_desc: "Дар Базис-Раскрой ба Настройка -> Параметры -> Бирки (Этикетки) гузашта, шаблонро бор кунед.",
         step3_title: "Андозаро Муайян Кунед",
@@ -1140,25 +1105,19 @@
         lic_card_title: "Иҷозатнома ва Ҳуқуқи Муаллиф",
         lic_card_p1: "Ин лоиҳа таҳти иҷозатномаи Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) паҳн мешавад.",
         lic_card_p2: "Асоси ибтидоӣ: шаблони кушодаи Giblab | Архитектура ва миқёси 17-зинагӣ: iRealBy_3D | Фурӯши тиҷоратӣ қатъиян манъ аст! Барои ҳамаи мебелсозон ройгон.",
-        btn_dl: "Боргирӣ ⬇️",
-        uz_row_desc: "100% Ӯзбекӣ (Soni, Qoldiq, Foydali qoldiq)",
-        ru_row_desc: "100% Русӣ (Кол-во, Остаток, Деловой остаток)",
-        kz_row_desc: "100% Қазоқӣ (Саны, Қалдық, Іскерлік қалдық)",
-        kg_row_desc: "100% Қирғизӣ (Саны, Калдык, Иштиктүү калдык)",
-        tj_row_desc: "100% Тоҷикӣ (Шумора, Боқимонда, Боқимондаи корӣ)",
-        en_row_desc: "100% Англисӣ (Qty, Offcut, Usable offcut)",
         footer_author: "Муаллиф:",
         footer_proj: "Лоиҳа:"
       },
       en: {
-        hero_badge: "🔥 Adaptive Bazis-Raskroy System",
+        lic_badge: "🛡️ License: Free (Resale strictly prohibited!)",
         hero_title: "Cabix Bazis Tools",
-        hero_sub: "100% universal set of 17-level proportional adaptive labels and automation tools for Bazis-Mebelshchik and Bazis-Raskroy.",
+        hero_sub: "100% universal 17-level proportional adaptive label and automation system for Bazis-Mebelshchik and Bazis-Raskroy.",
         author_lbl: "Author:",
         base_lbl: "Based on:",
         version_lbl: "Version:",
-        btn_github: "GitHub Repository",
-        btn_download: "Download (.lbl)",
+        tag_free: "FREE / NOT FOR RESALE",
+        btn_github: "GitHub Repository ↗",
+        btn_download: "Download (.lbl) ⬇️",
         gallery_title: "Real Label Print Samples",
         gallery_sub: "High-resolution photographs of actual labels printed from Bazis-Raskroy (click to enlarge):",
         card_part_tag: "Standard Part",
@@ -1170,25 +1129,20 @@
         card_offcut_tag: "Standard Offcut",
         card_offcut_title: "Offcut (931 x 316 mm)",
         card_offcut_desc: "Optimized large QR code for rapid inventory scanning of small offcut boards.",
-        feat1_title: "🌐 Dedicated Templates in 6 Languages",
-        feat1_desc: "100% native localization for international and CIS furniture manufacturers (UZ, RU, KZ, KG, TJ, EN).",
+        feat1_title: "🌐 Universal Adaptive Template",
+        feat1_desc: "A single smart template automatically adapting to any roll size from 58×40 up to 100×60 mm for worldwide use.",
         feat2_title: "📐 17-Tier Proportional Scaling",
         feat2_desc: "Text, QR codes, and icons scale seamlessly to any thermal roll size from 58×40 up to 100×60 mm.",
         feat3_title: "✂️ Zero Overlap Guarantee",
         feat3_desc: "Edge-banding lines never collide with central dimensions. Every block is mathematically isolated.",
         feat4_title: "📦 Dedicated Offcut (Remnant) Mode",
         feat4_desc: "Clean inventory workflow with giant QR code designed specifically for leftover boards.",
-        dl_title: "Official Template Suite (.lbl)",
-        dl_sub: "Download pre-configured templates in your preferred language directly:",
-        th_lang: "Language / Version",
-        th_file: "Filename",
-        th_desc: "Features",
-        th_action: "Link",
-        master_row_desc: "Standard universal template (58×40 – 100×60 mm)",
+        master_card_desc: "17-tier dynamic proportional universal template for Bazis-Raskroy (58×40 – 100×60 mm).",
+        btn_dl_single: "Download (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️",
         guide_title: "Installation & Setup Guide",
         guide_sub: "Import and deploy to Bazis-Raskroy in under 3 minutes:",
         step1_title: "Download the Template",
-        step1_desc: "Choose and download the .lbl file in your desired language from the table above and save it locally.",
+        step1_desc: "Click the button above to download Cabix_Etiket_58x40_80x60_v1.0.1.lbl and save it locally.",
         step2_title: "Open Bazis-Raskroy Settings",
         step2_desc: "In Bazis-Raskroy, navigate to Settings -> Options -> Labels (Бирки) and click 'Load' (Загрузить).",
         step3_title: "Set Paper Dimensions",
@@ -1196,13 +1150,6 @@
         lic_card_title: "License & Attribution",
         lic_card_p1: "This project is distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License.",
         lic_card_p2: "Base template: Giblab open template | Architecture & 17-tier scaling: iRealBy_3D | Commercial resale strictly prohibited! Free for all furniture makers.",
-        btn_dl: "Download ⬇️",
-        uz_row_desc: "100% Uzbek (Soni, Qoldiq, Foydali qoldiq)",
-        ru_row_desc: "100% Russian (Кол-во, Остаток, Деловой остаток)",
-        kz_row_desc: "100% Kazakh (Саны, Қалдық, Іскерлік қалдық)",
-        kg_row_desc: "100% Kyrgyz (Саны, Калдык, Иштиктүү калдык)",
-        tj_row_desc: "100% Tajik (Шумора, Боқимонда, Боқимондаи корӣ)",
-        en_row_desc: "100% English (Qty, Offcut, Usable offcut)",
         footer_author: "Author:",
         footer_proj: "Project:"
       }
