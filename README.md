@@ -14,17 +14,15 @@
 cabix-bazis-tools/
 │
 ├── labels/                                          <-- Moslashuvchan etiketka shablonlari (.lbl)
-│   ├── Cabix_Etiket_v1_Moslashuvchan_.lbl            (Universal Master shablon)
-│   ├── Cabix_Etiket_v1.01_Moslashuvchan_MultiLang.lbl (Dinamik til sozlanuvchi v1.01 versiya)
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1.lbl          (Asosiy Moslashuvchan shablon)
 │   ├── Readme.md                                    (Barcha tillardagi Release Notes)
 │   │
-│   ├── Cabix_Etiket_58x40_80x60_v1_UZ.lbl           (O'zbekcha - 100% o'zbekcha izohlar bilan)
-│   ├── Cabix_Etiket_58x40_80x60_v1_RU.lbl           (Русский - 100% русские комментарии)
-│   ├── Cabix_Etiket_58x40_80x60_v1_KZ.lbl           (Қазақша - 100% қазақша түсініктемелер)
-│   ├── Cabix_Etiket_58x40_80x60_v1_KG.lbl           (Кыргызча - 100% кыргызча түшүндүрмөлөр)
-│   ├── Cabix_Etiket_58x40_80x60_v1_TJ.lbl           (Тоҷикӣ - 100% эзоҳҳо бо забони тоҷикӣ)
-│   ├── Cabix_Etiket_58x40_80x60_v1_EN.lbl           (English - 100% English comments)
-│   └── Qollanma_v1_Multilingual.md
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_UZ.lbl       (🇺🇿 O'zbekcha - 100% o'zbekcha matnlar)
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_RU.lbl       (🇷🇺 Русский - 100% русские тексты)
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_KZ.lbl       (🇰🇿 Қазақша - 100% қазақша мәтіндер)
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_KG.lbl       (🇰🇬 Кыргызча - 100% кыргызча тексттер)
+│   ├── Cabix_Etiket_58x40_80x60_v1.0.1_TJ.lbl       (🇹🇯 Тоҷикӣ - 100% матнҳо бо забони тоҷикӣ)
+│   └── Cabix_Etiket_58x40_80x60_v1.0.1_EN.lbl       (🇬🇧 English - 100% English texts)
 │
 ├── scripts/                                         <-- Kelajakdagi JS skriptlar
 │   ├── raskroy/                                     (2D Raskroy va nesting skriptlari)
