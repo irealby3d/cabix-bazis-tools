@@ -1,9 +1,10 @@
 # Cabix Bazis Tools 🛠️
 
-**Bazis-Mebelshchik va Bazis-Raskroy uchun professional avtomatlashtirish vositalari, skriptlar va universal moslashuvchan etiketka.**
+**Giblab Local dasturi va giblab.com saytida to'liq test qilingan, Bazis-Mebelshchik va Bazis-Raskroy uchun professional universal moslashuvchan etiketka.**
 
 ✍️ **Muallif / Developer:** `iRealBy_3D`  
 🏛️ **Asl baza / Original Base:** Giblab  
+🧪 **Sinov / Tested:** **Giblab Local** dasturi va **[giblab.com](https://giblab.com)** platformasida 100% test qilingan va sinovdan o'tgan  
 🌐 **GitHub Pages:** [https://irealby3d.github.io/cabix-bazis-tools/](https://irealby3d.github.io/cabix-bazis-tools/)  
 📜 **Litsenziya / License:** `License: Free (Resale strictly prohibited!)` — CC BY-NC-SA 4.0
 
