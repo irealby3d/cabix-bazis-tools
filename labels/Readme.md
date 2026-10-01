@@ -3,7 +3,8 @@
 **Muallif / Developer:** `iRealBy_3D`  
 **Asl Baza / Base:** Giblab  
 **Litsenziya / License:** `License: Free (Resale strictly prohibited!)` — CC BY-NC-SA 4.0  
-**Dastur / Software:** Bazis-Raskroy (Bazis-Mebelshchik 8–22)
+**Dastur / Software:** Giblab Local, giblab.com, Bazis-Raskroy (Bazis-Mebelshchik 8–22)  
+**Sinov / Tested:** **Giblab Local** dasturi va **giblab.com** saytida 100% test qilingan
 
 ---
 
