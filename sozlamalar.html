@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabix Etiketka Sozlamalari — To'liq Parametrlar Qo'llanmasi (v1.0.1)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090d16;
+      --bg-card: rgba(18, 24, 38, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(59, 130, 246, 0.4);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #2563eb;
+      --accent-light: #60a5fa;
+      --accent-glow: rgba(37, 99, 235, 0.35);
+      --success: #10b981;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 100% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
+      padding: 0 16px 60px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 19px;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link-btn {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Language Switcher Bar */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 11px;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .lang-btn:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+    .lang-btn.active { background: var(--accent); color: #fff; }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 32px 12px 28px 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--accent-light);
+      font-family: var(--mono);
+      font-size: 12.5px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(26px, 4.5vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    p.subtitle {
+      font-size: clamp(14px, 2vw, 17px);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* SECTION STYLES */
+    .section-wrap {
+      margin-bottom: 40px;
+    }
+
+    .section-heading {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-heading span.icon {
+      font-size: 22px;
+    }
+
+    /* TABLE */
+    .param-card {
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    thead {
+      background: rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    th {
+      padding: 14px 18px;
+      font-weight: 700;
+      color: #e2e8f0;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .code-param {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent-light);
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .code-val {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 2px 7px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .badge-tip {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 6px;
+    }
+
+    /* FAQ ACCORDION CARDS */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 18px;
+    }
+
+    .faq-card {
+      background: var(--bg-card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .faq-a {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .faq-a strong {
+      color: #e2e8f0;
+    }
+
+    /* BOTTOM CTA CARD */
+    .bottom-cta {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .bottom-cta h3 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .bottom-cta p {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 580px;
+      margin: 0 auto 20px auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 16px var(--accent-glow);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 28px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 48px;
+    }
+
+    footer a { color: var(--accent-light); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Nav -->
+    <nav class="top-nav">
+      <a href="index.html" class="nav-brand">
+        <span>Cabix Bazis Tools</span>
+        <span style="font-size: 11px; font-family: var(--mono); background: var(--accent); padding: 2px 7px; border-radius: 6px;">v1.0.1</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-link-btn" data-i18n="nav_home">← Bosh Sahifa</a>
+        <a href="index.html#downloads" class="nav-link-btn" data-i18n="nav_download">Yuklab Olish ⬇️</a>
+
+        <!-- Lang Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="setLang('uz')">🇺🇿 UZ</button>
+          <button class="lang-btn" onclick="setLang('ru')">🇷🇺 RU</button>
+          <button class="lang-btn" onclick="setLang('en')">🇬🇧 EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <div class="badge" data-i18n="header_badge">⚙️ Shablon Parametrlari Bo'yicha Qo'llanma</div>
+      <h1 data-i18n="header_title">Cabix Etiketka Sozlamalari</h1>
+      <p class="subtitle" data-i18n="header_sub">Giblab Local, giblab.com va Bazis-Raskroy muhitida etiketka shablonini o'zingizga moslash bo'yicha to'liq qo'llanma.</p>
+    </header>
+
+    <!-- Section 1: Masshtab va QR -->
+    <section class="section-wrap">
+      <div class="section-heading">
+        <span class="icon">📐</span>
+        <span data-i18n="sec1_title">1. Masshtab, QR-kod va Oraliq Sozlamalari</span>
+      </div>
+
+      <div class="param-card">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="th_name">Parametr</th>
+                <th data-i18n="th_default">Standart</th>
+                <th data-i18n="th_desc">Vazifasi</th>
+                <th data-i18n="th_action">Qachon o'zgartiriladi?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="code-param">kadj</span></td>
+                <td><span class="code-val">1.0</span></td>
+                <td data-i18n="kadj_desc">Umumiy masshtabni to'g'irlash koeffitsiyenti.</td>
+                <td data-i18n="kadj_tip"><span class="badge-tip">MASLAHAT</span>Hamma yozuvlar va rasmlarni bir vaqtda 10% kattalashtirish uchun <strong>1.1</strong>, kichraytirish uchun <strong>0.9</strong> qiling.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">qrk</span></td>
+                <td><span class="code-val">0.35</span></td>
+                <td data-i18n="qrk_desc">QR-kod o'lchamining etiketka balandligiga nisbati.</td>
+                <td data-i18n="qrk_tip">QR-kod juda katta bo'lsa <strong>0.25 – 0.30</strong> ga kamaytiring, skaner o'qishi qiyin bo'lsa <strong>0.40</strong> ga oshiring.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">tpad</span></td>
+                <td><span class="code-val">2.0 mm</span></td>
+                <td data-i18n="tpad_desc">Chap tomondagi matnlar bilan QR-kod orasidagi oraliq (zaxira masofa).</td>
+                <td data-i18n="tpad_tip"><span class="badge-tip">MUHIM</span>Agar uzun detallar nomi yoki loyiha yozuvi QR-kodga tegib qolsa, buni <strong>3</strong> yoki <strong>4</strong> qilib kengaytiring.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">isz0</span></td>
+                <td><span class="code-val">6.0 mm</span></td>
+                <td data-i18n="isz0_desc">Texnologik ikonkalar (freza, paz, sverlenie) etalon o'lchami.</td>
+                <td data-i18n="isz0_tip">Ikonkalar juda kichik yoki katta ko'rinsa 5 dan 7 gacha o'zgartirish mumkin.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">ig0</span></td>
+                <td><span class="code-val">1.0 mm</span></td>
+                <td data-i18n="ig0_desc">QR-kod va ikonkalar ustuni orasidagi bo'shliq.</td>
+                <td data-i18n="ig0_tip">Ikonkalar QR-kodga juda yaqin turgan bo'lsa 1.5 yoki 2 qiling.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Kromka Chiziqlari -->
+    <section class="section-wrap">
+      <div class="section-heading">
+        <span class="icon">✂️</span>
+        <span data-i18n="sec2_title">2. Kromka Chiziqlari va Matn Ankerlari</span>
+      </div>
+
+      <div class="param-card">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="th_name">Parametr</th>
+                <th data-i18n="th_default">Standart</th>
+                <th data-i18n="th_desc">Vazifasi</th>
+                <th data-i18n="th_action">Qachon o'zgartiriladi?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="code-param">lt</span></td>
+                <td><span class="code-val">4.5</span></td>
+                <td data-i18n="lt_desc">Yuqori kromka chizig'ining markazdan yuqoriga masofasi.</td>
+                <td data-i18n="lt_tip">Agar o'lcham raqamlari (uzunlik x kenglik) yuqori chiziqqa tegib qolsa, 5.0 ga oshiring.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">lb</span></td>
+                <td><span class="code-val">2.2</span></td>
+                <td data-i18n="lb_desc">Pastki kromka chizig'ining markazdan pastga masofasi.</td>
+                <td data-i18n="lb_tip">Pastki chiziq o'lchamlardan uzoqroq turishi kerak bo'lsa, 2.5 yoki 3.0 qiling.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">ta</span></td>
+                <td><span class="code-val">1.0</span></td>
+                <td data-i18n="ta_desc">Matnning vertikal bog'lanishi (Y-anker): 1 = pastki chet, 0 = yuqori chet.</td>
+                <td data-i18n="ta_tip">Agar ba'zi printer drayverlarida matn pastki chiziqqa yopishib qolsa, <strong>0</strong> qilib ko'ring.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Qoldiq (Остаток) Sozlamalari -->
+    <section class="section-wrap">
+      <div class="section-heading">
+        <span class="icon">📦</span>
+        <span data-i18n="sec3_title">3. Qoldiq (Остаток / Деловой остаток) Sozlamalari</span>
+      </div>
+
+      <div class="param-card">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="th_name">Parametr</th>
+                <th data-i18n="th_default">Standart</th>
+                <th data-i18n="th_desc">Vazifasi</th>
+                <th data-i18n="th_action">Qachon o'zgartiriladi?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="code-param">qrl</span></td>
+                <td><span class="code-val">22.0 mm</span></td>
+                <td data-i18n="qrl_desc">Qoldiq detallar etiketkasidagi yirik QR-kod o'lchami.</td>
+                <td data-i18n="qrl_tip">Omborda uzoqdan tez skanerlash uchun o'lchamni 24-26 gacha oshirish mumkin.</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">qtext1</span></td>
+                <td><span class="code-val">Cabix by iRealBy_3D</span></td>
+                <td data-i18n="qtext1_desc">Qoldiq etiketkasida QR-kod yonidagi erkin matn, 1-qator.</td>
+                <td data-i18n="qtext1_tip"><span class="badge-tip">SEX NOMI</span>Bu yerga o'z mebel sexi yoki brendingiz nomini yozishingiz mumkin (bo'sh qoldirilsa ko'rinmaydi).</td>
+              </tr>
+              <tr>
+                <td><span class="code-param">qtext2</span></td>
+                <td><span class="code-val">(Bo'sh)</span></td>
+                <td data-i18n="qtext2_desc">Qoldiq etiketkasida QR-kod yonidagi erkin matn, 2-qator.</td>
+                <td data-i18n="qtext2_tip"><span class="badge-tip">TELEFON</span>Bu yerga omborchi yoki korxona telefon raqamini kiritish mumkin (masalan: +998 90 ...).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Tez-tez Uchraydigan Savollar (FAQ) -->
+    <section class="section-wrap">
+      <div class="section-heading">
+        <span class="icon">💡</span>
+        <span data-i18n="sec4_title">4. Amaliy Maslahatlar va Tez-tez Uchraydigan Savollar</span>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-q">❓ <span data-i18n="faq1_q">Lenta o'lchami 58x40 emas, 80x60 bo'lsa nima qilish kerak?</span></div>
+          <div class="faq-a" data-i18n="faq1_a">Hech qanday parametrni o'zgartirish shart emas! Giblab yoki Bazis dasturida qog'oz o'lchamini (dx=80, dy=60) belgilasangiz, shablonning o'zi 17-pog'onali proporsional algoritm bilan hamma narsani avtomatik masshtablaydi.</div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">❓ <span data-i18n="faq2_q">Detal nomi juda uzun bo'lsa va QR-kodga tegib qolsa?</span></div>
+          <div class="faq-a" data-i18n="faq2_a">Shablon parametrlaridan <strong>tpad</strong> qiymatini 2 dan <strong>3</strong> yoki <strong>4</strong> ga oshiring. Bu matn va QR orasidagi masofani kengaytiradi.</div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">❓ <span data-i18n="faq3_q">Qoldiq etiketkasiga o'z sex nomimni qanday yozaman?</span></div>
+          <div class="faq-a" data-i18n="faq3_a">Parametrlardan <strong>qtext1</strong> qatoriga korxona nomingizni (masalan: «Modern Mebel»), <strong>qtext2</strong> ga esa telefon raqamingizni yozib qo'ying.</div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-q">❓ <span data-i18n="faq4_q">Ikonkalar o'rniga matnli belgilar (C, P, F) chiqishi mumkinmi?</span></div>
+          <div class="faq-a" data-i18n="faq4_a">Ha! Parametrlarda <strong>grafic_images</strong> qiymatini <strong>false</strong> qilsangiz, rasm ikonkalar o'rniga matnli qisqartmalar chop etiladi.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <h3 data-i18n="cta_title">Tayyormisiz? Shablonni Yuklab Oling</h3>
+      <p data-i18n="cta_sub">Giblab Local dasturi va giblab.com platformasida 100% test qilingan rasmiy shablon.</p>
+      <a href="labels/Cabix_Etiket_58x40_80x60_v1.0.1.lbl" class="btn btn-primary" download data-i18n="btn_dl_cta">
+        Yuklab Olish (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Cabix Bazis Tools. Muallif: <strong>iRealBy_3D</strong> | Asos: <strong>Giblab</strong></p>
+      <p style="margin-top: 6px; font-size: 12px; color: #64748b;">License: Free (Resale strictly prohibited!) — CC BY-NC-SA 4.0</p>
+    </footer>
+  </div>
+
+  <script>
+    const translations = {
+      uz: {
+        nav_home: "← Bosh Sahifa",
+        nav_download: "Yuklab Olish ⬇️",
+        header_badge: "⚙️ Shablon Parametrlari Bo'yicha Qo'llanma",
+        header_title: "Cabix Etiketka Sozlamalari",
+        header_sub: "Giblab Local, giblab.com va Bazis-Raskroy muhitida etiketka shablonini o'zingizga moslash bo'yicha to'liq qo'llanma.",
+        sec1_title: "1. Masshtab, QR-kod va Oraliq Sozlamalari",
+        sec2_title: "2. Kromka Chiziqlari va Matn Ankerlari",
+        sec3_title: "3. Qoldiq (Остаток / Деловой остаток) Sozlamalari",
+        sec4_title: "4. Amaliy Maslahatlar va Tez-tez Uchraydigan Savollar",
+        th_name: "Parametr",
+        th_default: "Standart",
+        th_desc: "Vazifasi",
+        th_action: "Qachon o'zgartiriladi?",
+        kadj_desc: "Umumiy masshtabni to'g'irlash koeffitsiyenti.",
+        kadj_tip: "Hamma yozuvlar va rasmlarni bir vaqtda 10% kattalashtirish uchun 1.1, kichraytirish uchun 0.9 qiling.",
+        qrk_desc: "QR-kod o'lchamining etiketka balandligiga nisbati.",
+        qrk_tip: "QR-kod juda katta bo'lsa 0.25 – 0.30 ga kamaytiring, skaner o'qishi qiyin bo'lsa 0.40 ga oshiring.",
+        tpad_desc: "Chap tomondagi matnlar bilan QR-kod orasidagi oraliq (zaxira masofa).",
+        tpad_tip: "Agar uzun detallar nomi yoki loyiha yozuvi QR-kodga tegib qolsa, buni 3 yoki 4 qilib kengaytiring.",
+        isz0_desc: "Texnologik ikonkalar (freza, paz, sverlenie) etalon o'lchami.",
+        isz0_tip: "Ikonkalar juda kichik yoki katta ko'rinsa 5 dan 7 gacha o'zgartirish mumkin.",
+        ig0_desc: "QR-kod va ikonkalar ustuni orasidagi bo'shliq.",
+        ig0_tip: "Ikonkalar QR-kodga juda yaqin turgan bo'lsa 1.5 yoki 2 qiling.",
+        lt_desc: "Yuqori kromka chizig'ining markazdan yuqoriga masofasi.",
+        lt_tip: "Agar o'lcham raqamlari (uzunlik x kenglik) yuqori chiziqqa tegib qolsa, 5.0 ga oshiring.",
+        lb_desc: "Pastki kromka chizig'ining markazdan pastga masofasi.",
+        lb_tip: "Pastki chiziq o'lchamlardan uzoqroq turishi kerak bo'lsa, 2.5 yoki 3.0 qiling.",
+        ta_desc: "Matnning vertikal bog'lanishi (Y-anker): 1 = pastki chet, 0 = yuqori chet.",
+        ta_tip: "Agar ba'zi printer drayverlarida matn pastki chiziqqa yopishib qolsa, 0 qilib ko'ring.",
+        qrl_desc: "Qoldiq detallar etiketkasidagi yirik QR-kod o'lchami.",
+        qrl_tip: "Omborda uzoqdan tez skanerlash uchun o'lchamni 24-26 gacha oshirish mumkin.",
+        qtext1_desc: "Qoldiq etiketkasida QR-kod yonidagi erkin matn, 1-qator.",
+        qtext1_tip: "Bu yerga o'z mebel sexi yoki brendingiz nomini yozishingiz mumkin (bo'sh qoldirilsa ko'rinmaydi).",
+        qtext2_desc: "Qoldiq etiketkasida QR-kod yonidagi erkin matn, 2-qator.",
+        qtext2_tip: "Bu yerga omborchi yoki korxona telefon raqamini kiritish mumkin (masalan: +998 90 ...).",
+        faq1_q: "Lenta o'lchami 58x40 emas, 80x60 bo'lsa nima qilish kerak?",
+        faq1_a: "Hech qanday parametrni o'zgartirish shart emas! Giblab yoki Bazis dasturida qog'oz o'lchamini (dx=80, dy=60) belgilasangiz, shablonning o'zi 17-pog'onali proporsional algoritm bilan hamma narsani avtomatik masshtablaydi.",
+        faq2_q: "Detal nomi juda uzun bo'lsa va QR-kodga tegib qolsa?",
+        faq2_a: "Shablon parametrlaridan tpad qiymatini 2 dan 3 yoki 4 ga oshiring. Bu matn va QR orasidagi masofani kengaytiradi.",
+        faq3_q: "Qoldiq etiketkasiga o'z sex nomimni qanday yozaman?",
+        faq3_a: "Parametrlardan qtext1 qatoriga korxona nomingizni (masalan: «Modern Mebel»), qtext2 ga esa telefon raqamingizni yozib qo'ying.",
+        faq4_q: "Ikonkalar o'rniga matnli belgilar (C, P, F) chiqishi mumkinmi?",
+        faq4_a: "Ha! Parametrlarda grafic_images qiymatini false qilsangiz, rasm ikonkalar o'rniga matnli qisqartmalar chop etiladi.",
+        cta_title: "Tayyormisiz? Shablonni Yuklab Oling",
+        cta_sub: "Giblab Local dasturi va giblab.com platformasida 100% test qilingan rasmiy shablon.",
+        btn_dl_cta: "Yuklab Olish (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️"
+      },
+      ru: {
+        nav_home: "← Главная",
+        nav_download: "Скачать ⬇️",
+        header_badge: "⚙️ Руководство по Параметрам Шаблона",
+        header_title: "Настройки Этикетки Cabix",
+        header_sub: "Полное руководство по тонкой настройке шаблона этикетки в Giblab Local, giblab.com и Базис-Раскрой.",
+        sec1_title: "1. Масштаб, QR-код и Отступы",
+        sec2_title: "2. Линии Кромок и Привязка Текста",
+        sec3_title: "3. Настройки Остатков (Деловой остаток)",
+        sec4_title: "4. Практические Советы и Частые Вопросы (FAQ)",
+        th_name: "Параметр",
+        th_default: "По умолчанию",
+        th_desc: "Назначение",
+        th_action: "Когда изменять?",
+        kadj_desc: "Коэффициент общей коррекции масштаба.",
+        kadj_tip: "Для увеличения всех элементов на 10% установите 1.1, для уменьшения — 0.9.",
+        qrk_desc: "Отношение размера QR-кода к высоте этикетки.",
+        qrk_tip: "Если QR слишком большой, уменьшите до 0.25 – 0.30; если плохо считывается сканером — увеличьте до 0.40.",
+        tpad_desc: "Отступ между левым текстом и QR-кодом (буфер безопасности).",
+        tpad_tip: "Если длинные названия деталей или проекта касаются QR-кода, увеличьте до 3 или 4.",
+        isz0_desc: "Базовый размер технологических иконок (фреза, паз, сверление).",
+        isz0_tip: "Если иконки слишком малы или велики, можно задать от 5 до 7 мм.",
+        ig0_desc: "Зазор между QR-кодом и колонкой иконок.",
+        ig0_tip: "Если иконки вплотную прижаты к QR, установите 1.5 или 2 мм.",
+        lt_desc: "Расстояние верхней линии кромки от центра вверх.",
+        lt_tip: "Если цифры габаритов касаются верхней линии кромки, увеличьте до 5.0.",
+        lb_desc: "Расстояние нижней линии кромки от центра вниз.",
+        lb_tip: "Если нужно отодвинуть нижнюю линию кромки от размеров, задайте 2.5 или 3.0.",
+        ta_desc: "Привязка текста по вертикали (Y-анкер): 1 = низ строки, 0 = верх строки.",
+        ta_tip: "Если в некоторых драйверах принтеров текст прилипает к нижней линии, попробуйте установить 0.",
+        qrl_desc: "Размер крупного QR-кода на этикетке остатка.",
+        qrl_tip: "Для быстрого сканирования на складе издалека можно увеличить до 24-26 мм.",
+        qtext1_desc: "Произвольный текст рядом с QR-кодом остатка, строка 1.",
+        qtext1_tip: "Сюда можно вписать название вашего цеха или бренда (если пусто — скрыто).",
+        qtext2_desc: "Произвольный текст рядом с QR-кодом остатка, строка 2.",
+        qtext2_tip: "Сюда можно вписать контактный телефон склада (напр. +998 90 ...).",
+        faq1_q: "Если рулон не 58x40, а 80x60 — что делать?",
+        faq1_a: "Никакие параметры менять не нужно! Просто укажите размер бумаги в программе Giblab или Базис (dx=80, dy=60). Шаблон пропорционально масштабирует всё автоматически.",
+        faq2_q: "Если название детали длинное и задевает QR-код?",
+        faq2_a: "В параметрах шаблона увеличьте значение tpad с 2 до 3 или 4 мм.",
+        faq3_q: "Как написать название цеха на бирке остатка?",
+        faq3_a: "В параметре qtext1 укажите название компании, а в qtext2 — телефон.",
+        faq4_q: "Можно ли вместо картинок выводить буквы (С, П, Ф)?",
+        faq4_a: "Да! Установите параметр grafic_images в значение false.",
+        cta_title: "Готовы начать? Скачайте шаблон",
+        cta_sub: "Официальный шаблон, протестированный в программе Giblab Local и на сайте giblab.com.",
+        btn_dl_cta: "Скачать (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️"
+      },
+      en: {
+        nav_home: "← Main Home",
+        nav_download: "Download ⬇️",
+        header_badge: "⚙️ Template Parameters Documentation",
+        header_title: "Cabix Label Settings",
+        header_sub: "Comprehensive guide to configuring adaptive label parameters in Giblab Local, giblab.com, and Bazis-Raskroy.",
+        sec1_title: "1. Scaling, QR Code & Spacing",
+        sec2_title: "2. Edge-Banding Lines & Text Anchors",
+        sec3_title: "3. Remnant (Offcut) Settings",
+        sec4_title: "4. Practical Tips & Troubleshooting (FAQ)",
+        th_name: "Parameter",
+        th_default: "Default",
+        th_desc: "Function",
+        th_action: "When to adjust?",
+        kadj_desc: "Overall scale multiplier adjustment.",
+        kadj_tip: "To scale all elements up by 10% set 1.1, to scale down set 0.9.",
+        qrk_desc: "Ratio of QR code size relative to label inner height.",
+        qrk_tip: "If QR is too large reduce to 0.25 – 0.30; if scanner struggles increase to 0.40.",
+        tpad_desc: "Padding between left texts and QR code.",
+        tpad_tip: "If long part or project names touch the QR code, increase to 3 or 4 mm.",
+        isz0_desc: "Benchmark size of machining icons (drill, mill, groove).",
+        isz0_tip: "If icons appear too small or large, adjust between 5 and 7 mm.",
+        ig0_desc: "Gap between QR code and icon column.",
+        ig0_tip: "If icons are pressed tightly against the QR code, set to 1.5 or 2 mm.",
+        lt_desc: "Distance of top edge line from center upwards.",
+        lt_tip: "If dimension numbers touch the upper line, increase to 5.0.",
+        lb_desc: "Distance of bottom edge line from center downwards.",
+        lb_tip: "If lower line needs more clearance from dimensions, set to 2.5 or 3.0.",
+        ta_desc: "Text vertical anchor: 1 = bottom baseline, 0 = top line.",
+        ta_tip: "If certain printer drivers cause text to overlap the lower line, try setting to 0.",
+        qrl_desc: "Size of giant QR code on offcut labels.",
+        qrl_tip: "For distant warehouse scanning, increase up to 24-26 mm.",
+        qtext1_desc: "Custom text line 1 next to offcut QR.",
+        qtext1_tip: "Enter your company name or brand here (hidden if left empty).",
+        qtext2_desc: "Custom text line 2 next to offcut QR.",
+        qtext2_tip: "Enter warehouse phone or contact number here.",
+        faq1_q: "What if the paper roll is 80x60 instead of 58x40?",
+        faq1_a: "No parameter changes required! Simply set the label dimensions in Giblab or Bazis (dx=80, dy=60) and the 17-tier adaptive engine scales everything automatically.",
+        faq2_q: "What if a long part name collides with the QR code?",
+        faq2_a: "In template parameters, increase tpad from 2 to 3 or 4 mm.",
+        faq3_q: "How to print company name on offcut labels?",
+        faq3_a: "Set qtext1 to your company name and qtext2 to your phone number.",
+        faq4_q: "Can I use text characters instead of graphic icons?",
+        faq4_a: "Yes! Set grafic_images to false to print character markers instead of PNG icons.",
+        cta_title: "Ready to Start? Download the Template",
+        cta_sub: "Official template fully tested on Giblab Local software and giblab.com platform.",
+        btn_dl_cta: "Download (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️"
+      }
+    };
+
+    let currentLang = 'uz';
+
+    function setLang(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+      localStorage.setItem('cabix_lang', lang);
+
+      // Buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.textContent.toLowerCase().includes(lang)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // DOM update
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+          el.innerHTML = t[key];
+        }
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('cabix_lang');
+      if (saved && translations[saved]) {
+        setLang(saved);
+      } else {
+        setLang('uz');
+      }
+    });
+  </script>
+</body>
+</html>
