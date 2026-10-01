@@ -725,6 +725,7 @@
 
       <div class="cta-buttons">
         <a href="#downloads" class="btn btn-primary" data-i18n="btn_download">Yuklab Olish (.lbl) ⬇️</a>
+        <a href="#video-guide" class="btn btn-secondary" data-i18n="btn_video">Video Qo'llanma 📹</a>
         <a href="https://github.com/irealby3d/cabix-bazis-tools" class="btn btn-secondary" target="_blank" data-i18n="btn_github">GitHub Repositoriy ↗</a>
       </div>
     </header>
@@ -821,7 +822,34 @@
       </div>
     </div>
 
-    <!-- Quick Guide Section -->
+        <!-- Video Guide Section -->
+    <section class="video-section" id="video-guide" style="margin-bottom: 48px;">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="video_title">📹 Video Qo'llanma</h2>
+        <p class="section-desc" data-i18n="video_sub">Bazis-Raskroy dasturida etiketkani o'rnatish, sozlash va chop etish bo'yicha to'liq amaliy video darslik:</p>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--card-border); border-radius: 20px; padding: 22px; max-width: 820px; margin: 0 auto; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);">
+        <div style="position: relative; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 8px 30px rgba(0,0,0,0.7); margin-bottom: 18px;">
+          <video controls preload="metadata" style="width: 100%; max-height: 480px; display: block; outline: none;" poster="assets/img/label_part.png">
+            <source src="https://github.com/irealby3d/cabix-bazis-tools/releases/download/v1.0.1/Cabix_Etiket_58x40_80x60_v1.0.1_guide.mp4" type="video/mp4">
+            Brauzeringiz video tegini qo'llab-quvvatlamaydi. Videoni quyidagi havola orqali yuklab olishingiz mumkin.
+          </video>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; padding: 4px 6px;">
+          <div>
+            <div style="font-weight: 700; color: #fff; font-size: 15px; font-family: var(--mono); margin-bottom: 4px;">Cabix_Etiket_58x40_80x60_v1.0.1_guide.mp4</div>
+            <div style="color: var(--text-muted); font-size: 13px;" data-i18n="video_meta">⏱️ Davomiyligi: ~5.5 daqiqa &nbsp;|&nbsp; 📦 Hajmi: 271 MB &nbsp;|&nbsp; 🎬 1080p HD</div>
+          </div>
+          <a href="https://github.com/irealby3d/cabix-bazis-tools/releases/download/v1.0.1/Cabix_Etiket_58x40_80x60_v1.0.1_guide.mp4" class="btn btn-secondary" style="font-size: 13px; padding: 10px 18px;" download data-i18n="btn_dl_video">
+            Videoni Yuklab Olish ⬇️
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- Quick Guide Section -->
     <section class="guide-section">
       <div class="section-header">
         <h2 class="section-title" data-i18n="guide_title">O'rnatish va Sozlash Qo'llanmasi</h2>
@@ -884,6 +912,12 @@
     // Multilingual Translations Dictionary (6 Languages)
     const translations = {
       uz: {
+        btn_video: "Video Qo'llanma 📹",
+        video_title: "📹 Video Qo'llanma",
+        video_sub: "Bazis-Raskroy dasturida etiketkani o'rnatish, sozlash va chop etish bo'yicha to'liq amaliy video darslik:",
+        video_meta: "⏱️ Davomiyligi: ~5.5 daqiqa | 📦 Hajmi: 271 MB | 🎬 1080p HD",
+        btn_dl_video: "Videoni Yuklab Olish ⬇️",
+
         lic_badge: "🛡️ Litsenziya: Bepul (Sotish qat'iyan taqiqlanadi!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "Bazis-Mebelshchik va Bazis-Raskroy uchun 100% universal, 17-pog'onali proporsional adaptiv etiketka va avtomatlashtirish tizimi.",
@@ -929,6 +963,12 @@
         footer_proj: "Loyiha:"
       },
       ru: {
+        btn_video: "Видео Инструкция 📹",
+        video_title: "📹 Видео Инструкция",
+        video_sub: "Полный практический видеоурок по установке, настройке и печати этикетки в Базис-Раскрой:",
+        video_meta: "⏱️ Длительность: ~5.5 мин | 📦 Размер: 271 МБ | 🎬 1080p HD",
+        btn_dl_video: "Скачать Видео ⬇️",
+
         lic_badge: "🛡️ Лицензия: Бесплатно (Продажа строго запрещена!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "100% универсальная 17-ступенчатая пропорциональная адаптивная этикетка и система автоматизации для Базис-Мебельщик и Базис-Раскрой.",
@@ -974,6 +1014,12 @@
         footer_proj: "Проект:"
       },
       kz: {
+        btn_video: "Бейне Нұсқаулық 📹",
+        video_title: "📹 Бейне Нұсқаулық",
+        video_sub: "Базис-Раскрой бағдарламасында этикетканы орнату, баптау және басып шығару бойынша бейнесабақ:",
+        video_meta: "⏱️ Ұзақтығы: ~5.5 мин | 📦 Көлемі: 271 МБ | 🎬 1080p HD",
+        btn_dl_video: "Бейнені Жүктеп Алу ⬇️",
+
         lic_badge: "🛡️ Лицензия: Тегін (Сатуға қатаң тыйым салынады!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "Базис-Мебельщик пен Базис-Раскрой үшін 100% әмбебап, 17 сатылы пропорционалды этикеткалар жүйесі.",
@@ -1019,6 +1065,12 @@
         footer_proj: "Жоба:"
       },
       kg: {
+        btn_video: "Видео Сабак 📹",
+        video_title: "📹 Видео Сабак",
+        video_sub: "Базис-Раскрой программасында этикетканы орнотуу, жөндөө жана басып чыгаруу боюнча практикалык видео:",
+        video_meta: "⏱️ Узактыгы: ~5.5 мин | 📦 Көлөмү: 271 МБ | 🎬 1080p HD",
+        btn_dl_video: "Видеону Жүктөп Алуу ⬇️",
+
         lic_badge: "🛡️ Лицензия: Акысыз (Сатууга катуу тыюу салынат!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "Базис-Мебельщик жана Базис-Раскрой үчүн 100% универсалдуу, 17 баскычтуу пропорционалдуу адаптивдүү этикеткалар тутуму.",
@@ -1064,6 +1116,12 @@
         footer_proj: "Долбоор:"
       },
       tj: {
+        btn_video: "Дастури Видеоӣ 📹",
+        video_title: "📹 Дастури Видеоӣ",
+        video_sub: "Дарси амалии видеоӣ оид ба насб, танзим ва чопи тамғакоғаз дар Базис-Раскрой:",
+        video_meta: "⏱️ Давомнокӣ: ~5.5 дақ | 📦 Ҳаҷм: 271 МБ | 🎬 1080p HD",
+        btn_dl_video: "Боргирии Видео ⬇️",
+
         lic_badge: "🛡️ Иҷозатнома: Ройгон (Фурӯш қатъиян манъ аст!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "Маҷмӯаи 100% универсалии тамғакоғазҳои мутобиқшавандаи 17-зинагӣ ва автоматикунонӣ барои Базис-Мебелшик ва Базис-Раскрой.",
@@ -1109,6 +1167,12 @@
         footer_proj: "Лоиҳа:"
       },
       en: {
+        btn_video: "Video Tutorial 📹",
+        video_title: "📹 Video Tutorial",
+        video_sub: "Complete step-by-step walkthrough on installing, configuring, and printing labels in Bazis-Raskroy:",
+        video_meta: "⏱️ Duration: ~5.5 mins | 📦 File size: 271 MB | 🎬 1080p HD",
+        btn_dl_video: "Download Video ⬇️",
+
         lic_badge: "🛡️ License: Free (Resale strictly prohibited!)",
         hero_title: "Cabix Bazis Tools",
         hero_sub: "100% universal 17-level proportional adaptive label and automation system for Bazis-Mebelshchik and Bazis-Raskroy.",

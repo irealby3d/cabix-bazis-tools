@@ -46,6 +46,16 @@ Bazis-Raskroy uchun yagona, to'liq universal va dinamik moslashuvchan etiketka s
 
 ---
 
+
+---
+
+## 📹 Video Qo'llanma (Video Guide)
+
+Etiketkani Bazis-Raskroy dasturiga o'rnatish, printer o'lchamlarini tanlash va chop etish jarayoni bo'yicha to'liq amaliy video darslik:
+- 🎬 **Onlayn tomosha qilish (GitHub Pages):** [https://irealby3d.github.io/cabix-bazis-tools/#video-guide](https://irealby3d.github.io/cabix-bazis-tools/#video-guide)
+- 📥 **Video faylni to'g'ridan-to'g'ri yuklab olish (HD):** [Cabix_Etiket_58x40_80x60_v1.0.1_guide.mp4 (271 MB)](https://github.com/irealby3d/cabix-bazis-tools/releases/download/v1.0.1/Cabix_Etiket_58x40_80x60_v1.0.1_guide.mp4)
+- 📦 **Rasmiy GitHub Reliz:** [Releases v1.0.1](https://github.com/irealby3d/cabix-bazis-tools/releases/tag/v1.0.1)
+
 ## 🚀 Qanday O'rnatiladi?
 
 1. `labels/` papkasidagi **`Cabix_Etiket_58x40_80x60_v1.0.1.lbl`** faylini yuklab oling.
