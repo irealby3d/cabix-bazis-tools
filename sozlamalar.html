@@ -391,6 +391,51 @@
       <h1 data-i18n="header_title">Cabix Etiketka Sozlamalari</h1>
       <p class="subtitle" data-i18n="header_sub">Giblab Local, giblab.com va Bazis-Raskroy muhitida etiketka shablonini o'zingizga moslash bo'yicha to'liq qo'llanma.</p>
     </header>
+    <!-- Quick Rule Hero Box (Combined 1 & 3) with Screenshot -->
+    <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: 20px; padding: 24px; margin-bottom: 36px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: center;">
+        
+        <!-- Left / Text -->
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #34d399; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px; margin-bottom: 12px;" data-i18n="quick_badge">
+            ⚡ QISQACHA VA ODDIY
+          </div>
+          <h2 style="font-size: clamp(18px, 2.5vw, 24px); font-weight: 800; color: #fff; margin-bottom: 14px; letter-spacing: -0.02em;" data-i18n="quick_title">
+            Asosiy ikkita sozlama:
+          </h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #e2e8f0;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="background: var(--accent); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; margin-top: 2px;">1</span>
+              <div>
+                <strong style="color: #fff;" data-i18n="quick_step1_head">Qog'oz o'lchami (Длина va Ширина):</strong>
+                <p style="color: var(--text-muted); font-size: 13px; margin-top: 2px;" data-i18n="quick_step1_body">Rasmda ko'rsatilganidek, termoprinteringiz lentasi o'lchamini kiritasiz (masalan: 58×40 yoki 80×60 mm), tamom.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="background: var(--accent); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; margin-top: 2px;">2</span>
+              <div>
+                <strong style="color: #fff;" data-i18n="quick_step2_head">Umumiy masshtab (kadj):</strong>
+                <p style="color: var(--text-muted); font-size: 13px; margin-top: 2px;" data-i18n="quick_step2_body">Agar yozuvlarni sal kattaroq chiqarmoqchi bo'lsangiz 1.1, kichikroq bo'lsa 0.9 qilasiz.</p>
+              </div>
+            </div>
+          </div>
+
+          <p style="color: #94a3b8; font-size: 12.5px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); font-style: italic;" data-i18n="quick_note">
+            💡 Qolgan barcha parametrlarga tegish shart emas — shablonning o'zi avtomatik to'g'rilaydi!
+          </p>
+        </div>
+
+        <!-- Right / Image -->
+        <div style="background: #0f1422; border: 1px solid var(--card-border); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+          <img src="assets/img/giblab_print_params.png" alt="Giblab va Bazis chop etish parametri" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+          <span style="color: var(--text-muted); font-size: 11px; margin-top: 8px; font-family: var(--mono);" data-i18n="img_caption">Giblab / Bazis: «Этикетки: Детали и остатки»</span>
+        </div>
+
+      </div>
+    </div>
+
 
     <!-- Section 1: Masshtab va QR -->
     <section class="section-wrap">
@@ -582,6 +627,14 @@
   <script>
     const translations = {
       uz: {
+        quick_badge: "⚡ QISQACHA VA ODDIY",
+        quick_title: "Asosiy ikkita sozlama:",
+        quick_step1_head: "Qog'oz o'lchami (Длина va Ширина):",
+        quick_step1_body: "Rasmda ko'rsatilganidek, termoprinteringiz lentasi o'lchamini kiritasiz (masalan: 58×40 yoki 80×60 mm), tamom.",
+        quick_step2_head: "Umumiy masshtab (kadj):",
+        quick_step2_body: "Agar yozuvlarni sal kattaroq chiqarmoqchi bo'lsangiz 1.1, kichikroq bo'lsa 0.9 qilasiz.",
+        quick_note: "💡 Qolgan barcha parametrlarga tegish shart emas — shablonning o'zi avtomatik to'g'rilaydi!",
+        img_caption: "Giblab / Bazis: «Этикетки: Детали и остатки»",
         nav_home: "← Bosh Sahifa",
         nav_download: "Yuklab Olish ⬇️",
         header_badge: "⚙️ Shablon Parametrlari Bo'yicha Qo'llanma",
@@ -630,6 +683,14 @@
         btn_dl_cta: "Yuklab Olish (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️"
       },
       ru: {
+        quick_badge: "⚡ КРАТКО И ПРОСТО",
+        quick_title: "Две основные настройки:",
+        quick_step1_head: "Размер бумаги (Длина и Ширина):",
+        quick_step1_body: "Как показано на картинке, просто укажите размер ленты термопринтера (например: 58×40 или 80×60 мм) и всё.",
+        quick_step2_head: "Общий масштаб (kadj):",
+        quick_step2_body: "Если нужно сделать надписи чуть крупнее — укажите 1.1, чуть мельче — 0.9.",
+        quick_note: "💡 Менять остальные параметры не требуется — шаблон рассчитывает всё автоматически!",
+        img_caption: "Giblab / Базис: «Этикетки: Детали и остатки»",
         nav_home: "← Главная",
         nav_download: "Скачать ⬇️",
         header_badge: "⚙️ Руководство по Параметрам Шаблона",
@@ -678,6 +739,14 @@
         btn_dl_cta: "Скачать (Cabix_Etiket_58x40_80x60_v1.0.1.lbl) ⬇️"
       },
       en: {
+        quick_badge: "⚡ SHORT & SIMPLE",
+        quick_title: "The only two settings you need:",
+        quick_step1_head: "Paper roll size (Length & Width):",
+        quick_step1_body: "As shown in the screenshot, simply specify your thermal label roll size (e.g. 58×40 or 80×60 mm).",
+        quick_step2_head: "Overall scaling (kadj):",
+        quick_step2_body: "To scale labels slightly larger set 1.1, slightly smaller set 0.9.",
+        quick_note: "💡 No need to touch any other parameters — the adaptive engine calculates everything automatically!",
+        img_caption: "Giblab / Bazis: «Labels: Parts & Offcuts»",
         nav_home: "← Main Home",
         nav_download: "Download ⬇️",
         header_badge: "⚙️ Template Parameters Documentation",
