@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Options>
+  <Items>
+    <Item>
+      <ReadOnly>Y</ReadOnly>
+    </Item>
+    <Item Name="Количество цифр после запятой (размеры деталей и кромок)"/>
+    <Item Name="Объеденить детали в одно изделие">
+      <Value>Y</Value>
+    </Item>
+    <Item Name="Использовать обозначение вместо номера позиций">
+      <Value>Y</Value>
+    </Item>
+    <Item Name="Толщина прифуговки равна толщине кромки">
+      <Value>Y</Value>
+    </Item>
+    <Item Name="Учитывать параметр &quot;Лицевая сторона&quot;">
+      <Value>Y</Value>
+    </Item>
+    <Item Name="Листовой раскрой">
+      <ReadOnly>Y</ReadOnly>
+      <Items>
+        <Item Name="Длина листа">
+          <Value>2800</Value>
+        </Item>
+        <Item Name="Ширина листа">
+          <Value>2070</Value>
+        </Item>
+      </Items>
+    </Item>
+    <Item Name="Что экспортировать">
+      <ReadOnly>Y</ReadOnly>
+      <Items>
+        <Item Name="Фрезерование контура">
+          <Items>
+            <Item Name="Фрезерование только зарезов, без смежных сторон">
+              <Value>Y</Value>
+            </Item>
+            <Item Name="Диаметр фрезы для контура">
+              <Value>12</Value>
+            </Item>
+            <Item Name="Выступ фрезы при сквозном фрезеровании контура">
+              <Value>1</Value>
+            </Item>
+            <Item Name="Отступ от детади при входе/выходе фрезы при фрезерование контура">
+              <Value>10</Value>
+            </Item>
+            <Item Name="Фрезерование контура отдельно от сверления"/>
+          </Items>
+          <Value>Y</Value>
+        </Item>
+        <Item Name="Фрезерование и пазование">
+          <Items>
+            <Item Name="Паз по горизонтали">
+              <Value>Y</Value>
+            </Item>
+            <Item Name="Паз по вертикали">
+              <Value>Y</Value>
+            </Item>
+            <Item Name="Толщина пазовального инструмента">
+              <Value>3.2</Value>
+            </Item>
+            <Item Name="Диаметр фрезы для фрезеровании пазов и карманов/выямок">
+              <Value>12</Value>
+            </Item>
+            <Item Name="Выступ фрезы при сквозном фрезеровании">
+              <Value>1</Value>
+            </Item>
+          </Items>
+          <Value>Y</Value>
+        </Item>
+        <Item Name="Сверления">
+          <Items>
+            <Item Name="Минимальная толщина для сверления">
+              <Value>6</Value>
+            </Item>
+            <Item Name="Минимальный диаметр отверстий">
+              <Value>3</Value>
+            </Item>
+            <Item Name="Выступ сверла при сквозном сверлении">
+              <Value>2</Value>
+            </Item>
+            <Item Name="Выступ сверла на его диаметр при сквозном сверлении"/>
+            <Item Name="Для сквозных сверлений добавить суффикс &apos;Th&apos; в наименование инструмента">
+              <Value>Y</Value>
+            </Item>
+          </Items>
+          <Value>Y</Value>
+        </Item>
+        <Item Name="Комплектующие">
+          <Items>
+            <Item Name="Содержимое составной фурнитуры">
+              <Value>Y</Value>
+            </Item>
+          </Items>
+          <Value>Y</Value>
+        </Item>
+        <Item Name="Профили">
+          <Value>Y</Value>
+        </Item>
+      </Items>
+    </Item>
+  </Items>
+</Options>
