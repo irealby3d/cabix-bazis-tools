@@ -19,10 +19,13 @@ cabix-bazis-tools/
 │   ├── Cabix_Etiket_58x40_80x60_v1.0.1.lbl          (Asosiy Universal Moslashuvchan shablon)
 │   └── Readme.md                                    (Etiketka bo'yicha to'liq qo'llanma)
 │
-├── scripts/                                         <-- Kelajakdagi JS skriptlar
+├── scripts/                                         <-- Avtomatlashtirish JS skriptlari
 │   ├── raskroy/                                     (2D Raskroy va nesting skriptlari)
 │   ├── panels/                                      (Panellar bilan ishlash, elastik o'lchamlar)
-│   └── export/                                      (Eksport va hisobot generatorlari)
+│   └── export/                                      (GibLab eksport skripti: L / R tizimi)
+│       ├── GibLabExport_V1.861name_code.js          (Asosiy eksport skripti)
+│       ├── GibLabExport.prop                        (Konfiguratsiya sozlamalari)
+│       └── README.md                                (Skript qo'llanmasi)
 │
 ├── LICENSE                                          <-- CC BY-NC-SA 4.0 (Free - Resale strictly prohibited)
 ├── README.md                                        <-- Asosiy bosh sahifa
@@ -66,6 +69,30 @@ Etiketkani Bazis-Raskroy dasturiga o'rnatish, printer o'lchamlarini tanlash va c
    - `Настройки` -> `Параметры бирки (этикетки)` bo'limiga kiring.
    - Shablonni ochish tugmasini bosib, `Cabix_Etiket_58x40_80x60_v1.0.1.lbl` faylini tanlang.
 3. Printeringiz o'lchami bo'yicha (masalan `58x40` yoki `80x60`) chop etishni boshlang!
+
+---
+
+## ⚙️ GibLab Export Skripti (v1.861 Cabix Edition)
+
+GibLab tizimi va [giblab.com](https://giblab.com) uchun Bazis-Mebelshchik modelidan detallar, frezerovka, priadka (sverlenie) va chizmalarni kesishga to'liq tayyorlab beradigan professional eksport skripti.
+
+- **Asl baza:** [giblab.com](https://giblab.com) rasmiy eksport skripti
+- **Modifikatsiya va yangilanishlar muallifi:** `iRealBy_3D`
+
+### 🌟 Asosiy Imkoniyatlar va "L / R" Tizimi:
+1. **Oldi va Orqa Yuzalarni Avtomatik Farqlash ("L" va "R"):**
+   - Detalning old (litsa / face) yuzasidagi operatsiyalar avtomatik ravishda `_L` (Left / Face) bilan belgilanadi (`side="true"`, `code="...xCount_L"`).
+   - Detalning orqa (oborot / back) yuzasidagi operatsiyalar avtomatik ravishda `_R` (Right / Back) bilan belgilanadi (`side="false"`, `code="...xCount_R"`).
+   - Bu stanok operatoriga qaysi tarafga ishlov berilayotganini aniq ko'rsatib, xatoliklarni oldini oladi.
+2. **Toza Detal Nomlari (Clean Part Names):**
+   - Detal nomlariga majburiy `№pozitsiya` tiqilishi olib tashlangan, modeldagi toza nom to'g'ridan-to'g'ri GibLab'ga uzatiladi.
+3. **Moslashuvchan Sozlamalar (`GibLabExport.prop`):**
+   - Freza diametri, o'tish chuqurligi, priadka va paz parametrlari alohida XML konfiguratsiyasida qulay boshqariladi.
+
+### 📥 Fayllar:
+- 📜 **Skript:** [`scripts/export/GibLabExport_V1.861name_code.js`](https://github.com/irealby3d/cabix-bazis-tools/raw/main/scripts/export/GibLabExport_V1.861name_code.js)
+- ⚙️ **Sozlamalar:** [`scripts/export/GibLabExport.prop`](https://github.com/irealby3d/cabix-bazis-tools/raw/main/scripts/export/GibLabExport.prop)
+- 📖 **Batafsil qo'llanma:** [`scripts/export/README.md`](https://github.com/irealby3d/cabix-bazis-tools/blob/main/scripts/export/README.md)
 
 ---
 
